@@ -5,6 +5,8 @@
   |============================
 */
 /* Common styles */
+@import url('../../assets/fonts/Impact/stylesheet.css');
+
 @import 'modern-normalize';
 @import url('./reset.css');
 @import url('./base.css');
