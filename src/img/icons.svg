@@ -68,8 +68,5 @@
     <symbol id="icon-x-white" viewBox="0 0 32 32">
       <path fill="none" stroke="#f0f0f0" style="stroke:var(--color3, #f0f0f0)" stroke-linejoin="round" stroke-linecap="round" stroke-width="2" d="M24 8 8 24M8 8l16 16"/>
     </symbol>
-    <symbol id="icon-faq" viewBox="0 0 32 32">
-<path stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.6667" d="M24 12l-8 8-8-8"></path>
-</symbol>
   </defs>
 </svg>
