@@ -1,0 +1,165 @@
+/* Базові стилі для секції проектів */
+.my-projects {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f0f0f0;
+}
+
+.my-projects-title {
+  font-family: 'Impact', sans-serif;
+  font-size: 52px;
+  letter-spacing: 1.8px;
+  line-height: 64px;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #292929;
+}
+
+.accent {
+  color: #00b068;
+}
+
+/* Список проектів */
+.my-projects-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  width: 100%;
+  max-width: 1280px;
+  padding: 0;
+  list-style: none;
+}
+
+.my-projects-item {
+  background-color: #f0f0f0;
+  padding: 0 20px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+}
+
+.hard-skills,
+.project-name {
+  text-align: left;
+}
+
+.project-img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 12px;
+  border-radius: 16px;
+}
+
+.hard-skills {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.03em;
+  color: #292929;
+  margin-bottom: 16px;
+}
+
+.project-name {
+  font-family: 'Poppins Medium', sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 125%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #292929;
+  margin-bottom: 16px;
+}
+
+/* Кнопка-посилання */
+.button-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 12px 24px;
+  width: 125px;
+  height: 48px;
+  background-color: #e4e5e6;
+  letter-spacing: 0.5px;
+  line-height: 28px;
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #292929;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.button-link:hover {
+  background-color: #bbbbbb;
+}
+
+/* Кнопка "Load more" */
+#loadMoreBtn {
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+#loadMoreBtn:hover {
+  background-color: #0056b3;
+}
+
+/* Медіа-запити для адаптивності */
+
+/* Mobile (від 320px до 767px) */
+@media (max-width: 767px) {
+  .project-item-box {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .button-link {
+    position: absolute;
+    right: 0;
+  }
+
+  .my-projects-item {
+    padding-bottom: 60px;
+  }
+}
+
+/* Tablet і Desktop (від 768px і більше) */
+@media (min-width: 768px) {
+  .my-projects-title {
+    font-size: 108px;
+    letter-spacing: 1.8px;
+    line-height: 124px;
+  }
+
+  .project-item-box {
+    display: flex; /* Розташування елементів горизонтально */
+    justify-content: space-between; /* Розподіляємо елементи по краях */
+    align-items: center;
+    width: 100%;
+  }
+
+  .project-name {
+    font-size: 36px;
+    letter-spacing: 0.5px;
+    line-height: 48px;
+    margin: 0;
+  }
+
+  .button-link {
+    margin-left: 32px;
+    position: static;
+  }
+}
