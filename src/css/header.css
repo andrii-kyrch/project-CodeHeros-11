@@ -80,3 +80,40 @@
     transform: translateY(-7px) rotate(90deg);
   }
 }
+
+@media screen and (min-width: 768px) {
+  .page-header {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .page-header-container {
+    display: block;
+  }
+
+  .page-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    font-size: 32px;
+    letter-spacing: 0.05em;
+    /* margin-right: 160px; */
+  }
+
+  .menu {
+    display: flex;
+    column-gap: 40px;
+  }
+
+  .menu-link:hover,
+  .menu-link:focus {
+    color: var(--accet-green);
+  }
+
+  .open-menu-btn {
+    display: none;
+  }
+}
