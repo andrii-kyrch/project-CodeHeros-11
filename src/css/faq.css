@@ -1,5 +1,6 @@
 .faq-title {
     max-width: 320px;
+    font-family: "Impact", sans-serif;
     font-weight: 400;
         font-size: 52px;
         line-height: 1.23077;
@@ -14,10 +15,11 @@ margin: 0 auto;
 .accent {
     color: #00b068;
 }
-
+img {
+    display: none;
+}
 .faq-container {
     max-width: 320px;
-    background-color: #fff;
     margin: 0 auto;
 }
 
@@ -30,6 +32,9 @@ margin: 0 auto;
 }
 
 .accordion-header {
+    display: flex;
+    gap: 24px;
+    font-family: "Poppins", sans-serif;
     cursor: pointer;
     padding: 28px 24px;
     font-weight: 400;
@@ -46,6 +51,7 @@ margin: 0 auto;
 }
 
 .accordion-content {
+    font-family: "Poppins", sans-serif;
     font-weight: 300;
         font-size: 16px;
         line-height: 1.5;
@@ -84,15 +90,25 @@ overflow: hidden;
         max-width: 704px;
     }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
     .container {
         display: flex;
-        gap: 104px;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: stretch;
     }
 .faq-title {
     max-width: 520px;
 }
+.section-title {
+    /* align-self: flex-start;
+    background-image: url('../img/faq/faq@2x.jpg');
+    background-position: left bottom;
+    background-repeat: no-repeat; */
+    background-size: 521px 406px;
+}
 .faq-container {
+    align-self: flex-end;
     max-width: 592px;
 }
 }
