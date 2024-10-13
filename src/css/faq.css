@@ -33,6 +33,7 @@ img {
 
 .accordion-header {
     display: flex;
+    justify-content: space-between;
     gap: 24px;
     font-family: "Poppins", sans-serif;
     cursor: pointer;
@@ -43,11 +44,15 @@ img {
         letter-spacing: 0.03em;
         text-transform: uppercase;
         color: #292929;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.5s ease;
 }
 
 .accordion-header:hover {
     background-color: #bcdfd1;
+    border-radius: 16px;
+}
+.accordion-header:hover .faq-icon {
+    fill: #bcdfd1;
 }
 
 .accordion-content {
@@ -69,18 +74,25 @@ overflow: hidden;
 
 .accordion-item.active .accordion-content {
     display: block;
+    transition: transform 0.5s ease;
 }
 
 .accordion-item.active .accordion-header {
-    background-color: #bcdfd1;;
+        background-color: #bcdfd1;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            transition: transform 0.5s ease;
 }
 .faq-icon {
-    fill: #292929;
-    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    stroke: #292929;
+    fill: #f0f0f0;;
+    transition: transform 0.5s ease;
 }
 
 .accordion-item.active .faq-icon {
     transform: rotate(180deg);
+    fill: #bcdfd1;
 }
 
 @media screen and (min-width: 768px) {
@@ -99,7 +111,7 @@ overflow: hidden;
     }
 }
 @media screen and (min-width: 1280px) {
-    .container {
+    .faq-section {
         display: flex;
         justify-content: space-between;
         align-items: stretch;
@@ -115,10 +127,17 @@ overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-image: url('../img/faq/faq-img@2x.png');
+    background-image: url('../img/faq/faq-img@1x.png');
     background-position: left bottom;
     background-repeat: no-repeat;
     background-size: 522px 407px;
+}
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+        .section-title {
+            background-image: url('../img/faq/faq-img@2x.png');
+        }
 }
 .faq-container { 
     margin: 0;
