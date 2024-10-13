@@ -1,6 +1,13 @@
-import { getReviews } from "./api.js";
+import axios from 'axios';
+
+axios.defaults.baseURL = 'https://portfolio-js.b.goit.study/api';
 
 const reviewsList = document.querySelector(".main-list");
+
+window.addEventListener("load", (event) => {
+    
+    loadReviews();
+})  
 
 function renderReviews(reviews) {
 
@@ -18,12 +25,7 @@ function renderReviews(reviews) {
     .join("");
 
     reviewsList.innerHTML = htmlMarkup;
-}    
-
-window.addEventListener("load", (event) => {
-    
-    loadReviews();
-})    
+}      
 
 async function loadReviews() {
 
@@ -31,4 +33,9 @@ async function loadReviews() {
     const reviews = response["data"];
 
     renderReviews(reviews);
+}
+
+async function getReviews() {
+
+    return await axios.get('/reviews');
 }
