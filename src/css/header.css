@@ -15,11 +15,40 @@
   line-height: 1;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--black);
+  color: var(--color-fg);
 }
 
 .logo-second-part {
   color: var(--accet-green);
+}
+
+.theme-switcher {
+  width: 48px;
+  height: 24px;
+  border: none;
+  border-radius: 16px;
+  padding: 2px;
+  background-color: var(--light-grey);
+  transition: background-color 250ms linear;
+}
+
+[aria-label='Switch to light theme'] {
+  background-color: var(--black);
+}
+
+.switch {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--accet-green);
+  transition: transform 250ms linear, background-color 250ms linear,
+    box-shadow 250ms linear;
+}
+
+[aria-label='Switch to light theme'] .switch {
+  background-color: var(--black);
+  box-shadow: 8px 0 0 0 var(--accet-green);
+  transform: translateX(16px);
 }
 
 @media screen and (max-width: 767px) {
@@ -44,7 +73,7 @@
     display: block;
     width: 21px;
     height: 2px;
-    background-color: var(--black);
+    background-color: var(--color-fg);
     margin-left: auto;
     margin-right: auto;
   }
@@ -89,6 +118,7 @@
 
   .page-header-container {
     display: block;
+    position: relative;
   }
 
   .page-nav {
@@ -111,6 +141,12 @@
   .menu-link:hover,
   .menu-link:focus {
     color: var(--accet-green);
+  }
+
+  .theme-switcher {
+    position: absolute;
+    top: 4px;
+    right: 377px;
   }
 
   .open-menu-btn {
