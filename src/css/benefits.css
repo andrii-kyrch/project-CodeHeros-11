@@ -23,6 +23,13 @@
   flex-direction: column;
   gap: 16px;
 }
+.benefits-item-icon-wrapper{
+  width: fit-content;
+  padding: 12px;
+  line-height: 0;
+  border-radius: 8px;
+  background-color: var(--color-benefits-icon-bg);
+}
 .benefits-item-title{
   font-weight: 400;
   font-size: 18px;
