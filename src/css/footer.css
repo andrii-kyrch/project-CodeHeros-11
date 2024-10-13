@@ -1,0 +1,136 @@
+.footer {
+    padding: 40px 20px 24px 20px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  font-family: "Impact", sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-bottom: 32px;
+}
+
+.logo-lloyd, .logo-dot {
+  color: #292929;
+}
+
+.logo-jefferson {
+  color: #00b068;
+}
+
+.social-links {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 24px;
+  width: 87px;
+  height: 168px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  letter-spacing: 0.03em;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: var(--Black, #292929);
+font-size: 16px;
+font-style: normal;
+font-weight: 300;
+line-height: 24px; /* 150% */
+letter-spacing: 0.03em;
+}
+
+.social-links a:hover,
+.social-links a:focus {
+    color: #009156;
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+
+.copyright {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: #292929;
+    margin-top: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+    main {
+        flex-grow: 0;
+    }
+    .container {
+      max-width: 768px;
+    }
+
+    .footer {
+        padding: 40px 32px 24px 32px;
+      }
+    
+      .social-links {
+            flex-direction: row;
+            gap: 24px;
+            width: 87px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            height: 24px;
+            width: 412px;
+            gap: 40px;
+      }
+    
+      .copyright {
+        text-align: right;
+      }
+    
+      /* Fix line break on tablet */
+      .copyright br {
+        display: none;
+      }
+    
+    }
+    @media only screen and (min-width: 1280px) {
+        .container {
+          max-width: 1280px;
+        }
+        .footer-content {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+          }
+        
+          .footer-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            width: 412px; 
+          }
+        
+          .social-links {
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 40px;
+          }
+        
+          .copyright {
+            margin: 0;
+            width: 100%;
+            text-align: right;
+          }
+        }
+        
+      

@@ -23,7 +23,6 @@ function renderReviews(reviews) {
 window.addEventListener("load", (event) => {
     
     loadReviews();
-
 })    
 
 async function loadReviews() {
@@ -33,14 +32,4 @@ async function loadReviews() {
     console.log(reviews);
 
     renderReviews(reviews);
-    
-
 }
-
- 
-
-
-
-
-//вызываем апи функцию с получением отзывов 
-//показать ревью для пользователя
