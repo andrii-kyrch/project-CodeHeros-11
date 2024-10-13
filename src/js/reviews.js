@@ -29,7 +29,6 @@ async function loadReviews() {
 
     const response = await getReviews();
     const reviews = response["data"];
-    console.log(reviews);
 
     renderReviews(reviews);
 }
