@@ -1,0 +1,93 @@
+.main-reviews {
+  padding-left: 20px;
+  padding-right: 20px;
+  min-width: 360px;
+  min-height: 464px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.title-reviews {
+  font-family: "Impact", sans-serif;
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 1.23077;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #292929;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 51px;
+}
+
+.main-list {
+    display: flex;
+    align-items: baseline;
+    gap: 24px;
+    border-radius: 16px;
+    min-width: 320px;
+}
+
+.review-item {
+    background: #e4e5e6;
+    border-radius: 16px;
+    float: left;
+    width: 100%;
+    display: inline;
+}
+
+.review-style {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 24px;
+    border-radius: 16px;
+    padding: 32px;
+    min-width: 320px;
+    width: 320px; 
+    flex-wrap: wrap;
+}
+
+.review-text {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    color: #292929;
+}
+
+.user-card {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 16px;
+    width: 256px;
+    height: 40px;
+}
+
+.avatar {
+  width: 40px;
+  border-radius: 50%;
+}
+
+.userName {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    color: #292929;
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+
+}
+
+@media (min-width: 1280px) and (max-width: 1280px) {
+
+}
