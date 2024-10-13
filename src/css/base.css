@@ -20,12 +20,14 @@
   --color-bg: var(--white);
   --color-fg: var(--black);
   --color-benefits-icon-bg: var(--light-accent);
+  --color-benefits-title-part-fg: var(--accet-green);
 }
 
 [data-theme='dark'] {
   --color-bg: var(--black-dt);
   --color-fg: var(--white-dt);
   --color-benefits-icon-bg: var(--dark-accet-dt);
+  --color-benefits-title-part-fg: var(--accet-green);
 }
 
 body {
