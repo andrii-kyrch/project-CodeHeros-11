@@ -52,3 +52,17 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.section-margin{
+  margin-bottom: 40px;
+}
+  @media (min-width: 767px) {
+    .section-margin{
+      margin-bottom: 124px;
+    }
+  @media (min-width: 1280px){
+    .section-margin{
+      margin-bottom: 164px;
+    }
+  }
+}
