@@ -44,11 +44,15 @@ img {
         letter-spacing: 0.03em;
         text-transform: uppercase;
         color: #292929;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.5s ease;
 }
 
 .accordion-header:hover {
     background-color: #bcdfd1;
+    border-radius: 16px;
+}
+.accordion-header:hover .faq-icon {
+    fill: #bcdfd1;
 }
 
 .accordion-content {
@@ -70,16 +74,20 @@ overflow: hidden;
 
 .accordion-item.active .accordion-content {
     display: block;
+    transition: transform 0.5s ease;
 }
 
 .accordion-item.active .accordion-header {
         background-color: #bcdfd1;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            transition: transform 0.5s ease;
 }
 .faq-icon {
     flex-shrink: 0;
     stroke: #292929;
     fill: #f0f0f0;;
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
 }
 
 .accordion-item.active .faq-icon {
@@ -103,7 +111,7 @@ overflow: hidden;
     }
 }
 @media screen and (min-width: 1280px) {
-    .container {
+    .faq-section {
         display: flex;
         justify-content: space-between;
         align-items: stretch;
