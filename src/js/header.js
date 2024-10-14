@@ -15,8 +15,7 @@ function calculateSettingAsThemeString({
 
 function updateButton({ buttonEl, isDark }) {
   const newCta = isDark ? 'Switch to light theme' : 'Switch to dark theme';
-  // use an aria-label if you are omitting text on the button
-  // and using a sun/moon icon, for example
+
   buttonEl.setAttribute('aria-label', newCta);
   buttonEl.setAttribute('title', newCta);
 }
@@ -45,4 +44,20 @@ button.addEventListener('click', event => {
   updateThemeOnHtmlEl({ theme: newTheme });
 
   currentThemeSetting = newTheme;
+});
+
+const openMenuBtn = document.querySelector('.open-menu-btn');
+const mobileMenu = document.querySelector('.menu');
+const menuLinks = document.querySelectorAll('.menu-link');
+
+openMenuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('is-open');
+  openMenuBtn.classList.toggle('active');
+});
+
+menuLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.remove('is-open');
+    openMenuBtn.classList.remove('active');
+  });
 });
