@@ -1,11 +1,3 @@
-ul,
-li {
-  list-style: none;
-}
-
-.about-me {
-}
-
 .about-me-container {
   max-width: 1280px;
   width: 100%;
@@ -27,22 +19,24 @@ li {
   display: flex;
   justify-content: flex-end;
   gap: 140px;
-
   background-image: url(../img/decor\ bg\ 2.png);
   background-position: right bottom;
   background-repeat: no-repeat;
   min-height: 800px;
 }
-
+img {
+  width: 100%;
+  display: block;
+}
 .about__img {
-  margin-right: 30px;
-  margin-bottom: 80px;
-  margin-left: 40px;
-  align-self: flex-end;
+  position: absolute;
+  right: 52%;
+  top: 53%;
 }
 
 .about__info {
   max-width: 480px;
+  position: relative;
 }
 
 .about__info h3 {
@@ -74,7 +68,10 @@ li {
   display: flex;
   justify-content: center;
   gap: 136px;
-  padding-bottom: 60px;
+}
+
+.about__education {
+  margin-right: 40px;
 }
 
 .about__education h3,
@@ -119,4 +116,83 @@ li {
   height: 4px;
   background: var(--accet-green);
   transform: rotate(-180deg);
+}
+
+@media (max-width: 992px) {
+  .about__img {
+    right: 45%;
+    top: 60%;
+  }
+
+  img {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-me-container {
+    max-width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .about__info {
+    max-width: 366px;
+  }
+
+  .about__box {
+    background-image: url(../img/decor.png);
+  }
+
+  .about__img {
+    right: 48%;
+    top: 63%;
+  }
+
+  img {
+    width: 86%;
+  }
+  .about__box-bottom {
+    gap: 0;
+    justify-content: normal;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-me-container {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .about__title h2 {
+    font-size: 52px;
+    line-height: 64px;
+    letter-spacing: 0.03em;
+  }
+
+  .about__img {
+    display: block;
+    position: static;
+    padding-bottom: 40px;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .about__box {
+    display: block;
+    justify-content: normal;
+    background-image: none;
+    margin-bottom: 40px;
+  }
+
+  .about__box-bottom {
+    display: block;
+  }
+
+  .about__education {
+    margin-bottom: 40px;
+  }
 }
