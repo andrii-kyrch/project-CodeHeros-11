@@ -1,3 +1,7 @@
+.tech-skills-section {
+    position: relative;
+    width: 100%;
+}
 .tech-skills-title {
     position: absolute;
     width: 1px;
@@ -7,15 +11,29 @@
     overflow: hidden;
     border: 0;
 }
+.tech-skills-ribbons {
+    position: relative;
+    width: 100%;
+    height: 208px;
+    
+}
 .tech-skills-ribbon {
+    top: 0;
     background-color: #bcdfd1;
-    display: flex;
-    overflow: hidden;
-    white-space: nowrap;
+    z-index: 2;
 }
 .tech-skills-ribbon-rotated {
+    bottom: 0;
     background-color: #E4E5E6;
     transform: rotate(2deg);
+    z-index: 1;
+}
+.tech-skills-ribbon,
+.tech-skills-ribbon-rotated {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 104px;
     display: flex;
     overflow: hidden;
     white-space: nowrap;
@@ -24,34 +42,57 @@
     display: inline-block;
     padding-left: 100%;
     animation: marquee 20s linear infinite;
+    width: max-content;
 }
 .ribbon-item {
+    color: #292929;
+}
+.ribbon-item-rotated {
+    color: #00b068;
+}
+.ribbon-item,
+.ribbon-item-rotated {
     display: inline-block;
     padding: 32px 15px;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 1.25;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
 }
-.ribbon-item:last-child {
+/* .ribbon-item:last-child {
     padding-left: 30px;
-}
+} */
 
 @keyframes marquee {
     0% {
         transform: translate(0, 0);
     }
     100% {
-        transform: translate(-100%, 0);
+        transform: translate(-50%, 0);
     }
 }
 
 /*  Tablet */
 @media screen and (min-width: 768px) {
+    .tech-skills-ribbons {
+        height: 256px;
+    }
     .ribbon-content {
         animation-duration: 60s;
     }
+    .tech-skills-ribbon,
+    .tech-skills-ribbon-rotated {
+        height: 128px;
+}
     .ribbon-item {
         padding: 40px 15px;
     }
+    
 }
-
 .tech-skills-ribbon:hover .ribbon-content {
+    animation-play-state: paused;
+}
+.tech-skills-ribbon-rotated:hover .ribbon-content {
     animation-play-state: paused;
 }
