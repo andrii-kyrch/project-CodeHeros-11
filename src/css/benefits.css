@@ -1,5 +1,4 @@
 .benefits{
-  margin-bottom: 40px;
   position: relative;
 }
 .benefits-title{
@@ -37,9 +36,6 @@
   text-transform: uppercase;
 }
 @media (min-width: 767px) {
-  .benefits{
-    margin-bottom: 124px;
-  }
   .benefits-title{
     line-height: 115%;
     letter-spacing: 0.02em;
