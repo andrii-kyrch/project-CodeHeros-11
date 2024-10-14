@@ -4,7 +4,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #f0f0f0;
 }
 
 .my-projects-title {
@@ -14,11 +13,10 @@
   line-height: 64px;
   text-align: center;
   margin-bottom: 40px;
-  color: #292929;
 }
 
 .accent {
-  color: #00b068;
+  color: var(--color-primary);
 }
 
 /* Список проектів */
@@ -33,7 +31,6 @@
 }
 
 .my-projects-item {
-  background-color: #f0f0f0;
   padding: 0 20px;
   text-align: left;
   display: flex;
@@ -60,18 +57,15 @@
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0.03em;
-  color: #292929;
   margin-bottom: 16px;
 }
 
 .project-name {
-  font-family: 'Poppins Medium', sans-serif;
   font-weight: 500;
   font-size: 32px;
   line-height: 125%;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  color: #292929;
   margin-bottom: 16px;
 }
 
@@ -83,30 +77,29 @@
   padding: 12px 24px;
   width: 125px;
   height: 48px;
-  background-color: #e4e5e6;
+  background-color: var(--color-secondary);
   letter-spacing: 0.5px;
   line-height: 28px;
   font-weight: 500;
   font-size: 16px;
   text-transform: uppercase;
-  color: #292929;
   text-decoration: none;
   border-radius: 8px;
   transition: background-color 0.3s ease;
 }
 
 .button-link:hover {
-  background-color: #bbbbbb;
+  background-color: var(--color-hover-secondary);
 }
 
 /* Кнопка "Load more" */
 #loadMoreBtn {
-  background-color: #f0f0f0;
+  background-color: var(--color-bg);
   border: none;
-  color: black;
+  color: var(--color-text);
   text-transform: uppercase;
   text-decoration: underline;
-  text-decoration-color: #00b068;
+  text-decoration-color: var(--color-primary);
   font-size: 20px;
   padding: 10px;
   cursor: pointer;
@@ -116,23 +109,19 @@
 
 #loadMoreBtn:hover,
 #loadMoreBtn:focus {
-  color: #00b068;
+  color: var(--color-primary);
 }
 
 #loadMoreBtn:active {
   opacity: 0.8;
   padding: 12px 24px;
-  background-color: #f0f0f0;
-  color: #292929;
+  background-color: var(--color-bg);
+  color: var(--color-text);
   border: none;
   font-size: 18px;
   cursor: pointer;
   margin-top: 30px;
   text-transform: uppercase;
-}
-
-#loadMoreBtn:hover {
-  color: #00b068;
 }
 
 /* Медіа-запити для адаптивності */
