@@ -9,11 +9,10 @@
   line-height: 1;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--color-fg);
 }
 
 .logo-second-part {
-  color: var(--accet-green);
+  color: var(--color-accent-green);
 }
 
 .theme-switcher {
@@ -34,14 +33,14 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: var(--accet-green);
+  background-color: var(--color-accent-green);
   transition: transform 250ms linear, background-color 250ms linear,
     box-shadow 250ms linear;
 }
 
 [aria-label='Switch to light theme'] .switch {
   background-color: var(--black);
-  box-shadow: 8px 0 0 0 var(--accet-green);
+  box-shadow: 8px 0 0 0 var(--color-accent-green);
   transform: translateX(16px);
 }
 
@@ -51,7 +50,7 @@
 
 .menu-link:hover,
 .menu-link:focus {
-  color: var(--accet-green);
+  color: var(--color-hover-green);
 }
 
 .open-menu-btn {
@@ -66,7 +65,7 @@
   display: block;
   width: 21px;
   height: 2px;
-  background-color: var(--color-fg);
+  background-color: var(--color-text);
   margin-left: auto;
   margin-right: auto;
 }
