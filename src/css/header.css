@@ -3,7 +3,7 @@
   padding-bottom: 16px;
 }
 
-.page-header .logo {
+.logo {
   font-family: 'Impact', sans-serif;
   font-size: 24px;
   line-height: 1;
@@ -11,7 +11,7 @@
   text-transform: uppercase;
 }
 
-.logo-second-part {
+.logo-accent-color {
   color: var(--color-primary);
 }
 
