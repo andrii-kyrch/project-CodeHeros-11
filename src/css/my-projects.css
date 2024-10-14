@@ -101,18 +101,26 @@
 
 /* Кнопка "Load more" */
 #loadMoreBtn {
-  padding: 12px 24px;
-  background-color: #007bff;
-  color: white;
+  background-color: #f0f0f0;
   border: none;
-  border-radius: 5px;
-  font-size: 16px;
+  color: black;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-decoration-color: #00b068;
+  font-size: 20px;
+  padding: 10px;
   cursor: pointer;
-  margin-top: 30px;
+  outline: none;
+  transition: color 0.3s, text-decoration-color 0.3s;
 }
 
-#loadMoreBtn:hover {
-  background-color: #0056b3;
+#loadMoreBtn:hover,
+#loadMoreBtn:focus {
+  color: #00b068;
+}
+
+#loadMoreBtn:active {
+  opacity: 0.8;
 }
 
 /* Медіа-запити для адаптивності */
