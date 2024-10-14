@@ -1,33 +1,57 @@
 :root {
-  --black: #292929;
-  --accet-green: #00b068;
-  --white: #f0f0f0;
-  --light-grey: #e4e5e6;
-  --hover-grey: #bbb;
-  --light-accent: #bcdfd1;
-  --hover: #009156;
-  --black-dt: #1e2023;
-  --accet-green-dt: #14c57c;
-  --white-dt: #f0f0f0;
-  --charcoal-dt: #2a2d32;
-  --hover-charcoal-dt: #3b3f45;
-  --dark-accet-dt: #204136;
-  --hover-green-dt: #009156;
-  --error: #e74a3b;
+  --color-black: #292929;
+  --color-black-dt: #1e2023;
+
+  --color-white: #f0f0f0;
+  --color-white-dt: #f0f0f0;
+
+  --color-accent-green: #00b068;
+  --color-accent-green-dt: #14c57c;
+
+  --color-hover-green: #009156;
+
+  --color-light-accent: #bcdfd1;
+  --color-dark-accent-dt: #204136;
+
+  --color-light-grey: #e4e5e6;
+  --color-charcoal-grey-dt: #2a2d32;
+  --color-hover-grey: #bbbbbb;
+  --color-hover-charcoal-dt: #3b3f45;
+
+  --color-error: #e74a3b;
+
+  --color-bg-light: var(--color-white);
+  --color-bg-dark: var(--color-black-dt);
+
+  --color-text-light: var(--color-black);
+  --color-text-dark: var(--color-white-dt);
+
+  --color-border-light: var(--color-light-grey);
+  --color-border-dark: var(--color-charcoal-grey-dt);
 }
 
 [data-theme='light'] {
-  --color-bg: var(--white);
-  --color-fg: var(--black);
-  --color-benefits-icon-bg: var(--light-accent);
-  --color-benefits-title-part-fg: var(--accet-green);
+  --color-bg: var(--color-bg-light);
+  --color-text: var(--color-text-light);
+  --color-primary: var(--color-accent-green);
+  --color-hover-primary: var(--color-hover-green);
+  --color-secondary: var(--color-light-grey);
+  --color-hover-secondary: var(--color-hover-grey);
+  --color-accent: var(--color-light-accent);
+  --color-error: var(--color-error);
+  --color-border: var(--color-border-light);
 }
 
 [data-theme='dark'] {
-  /* --color-bg: var(--black-dt); */
-  --color-fg: var(--white-dt);
-  --color-benefits-icon-bg: var(--dark-accet-dt);
-  --color-benefits-title-part-fg: var(--accet-green);
+  --color-bg: var(--color-bg-dark);
+  --color-text: var(--color-text-dark);
+  --color-primary: var(--color-accent-green-dt);
+  --color-hover-primary: var(--color-hover-green);
+  --color-secondary: var(--color-charcoal-grey-dt);
+  --color-hover-secondary: var(--color-hover-charcoal-dt);
+  --color-accent: var(--color-dark-accent-dt);
+  --color-error: var(--color-error);
+  --color-border: var(--color-border-dark);
 }
 
 body {
@@ -36,7 +60,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.03em;
-  color: var(--color-fg);
+  color: var(--color-text);
   background-color: var(--color-bg);
 }
 
