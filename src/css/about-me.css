@@ -23,32 +23,41 @@
   min-height: 800px;
 }
 
+.about__title {
+  font-family: 'Impact', sans-serif;
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 1.23077;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--black);
+  margin-bottom: 40px;
+}
+
 .about__img {
-  margin-right: 30px;
-  margin-bottom: 80px;
-  margin-left: 40px;
-  align-self: flex-end;
+  border-radius: 16px;
+  margin-bottom: 40px;
 }
 
 .about__info {
-  max-width: 480px;
+  max-width: 360px;
 }
 
 .about__info h3 {
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
-  font-size: 36px;
-  line-height: 48px;
-  letter-spacing: 0.01em;
+  font-size: 32px;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
+  color: var(--black);
   margin-bottom: 32px;
 }
 
 .about__info p {
-  font-family: 'Poppins', sans-serif;
   font-weight: 300;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5;
   letter-spacing: 0.03em;
   margin-bottom: 24px;
 }
@@ -57,20 +66,18 @@
   margin-bottom: 0;
 }
 
-.about__box-bottom {
-  display: flex;
-  justify-content: center;
-  gap: 136px;
-  padding-bottom: 60px;
+.about__box,
+.about__education {
+  margin-bottom: 40px;
 }
 
 .about__education h3,
 .about__role h3 {
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
-  font-size: 36px;
-  line-height: 48px;
-  letter-spacing: 0.01em;
+  font-size: 32px;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
   margin-bottom: 32px;
 }
@@ -79,10 +86,11 @@
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5;
   letter-spacing: 0.03em;
-  max-width: 336px;
-  margin-bottom: 16px;
+  color: var(--black);
+  max-width: 360px;
+  margin-bottom: 12px;
   padding-left: 20px;
 }
 
@@ -97,11 +105,97 @@
 .about__link:before {
   content: '';
   position: absolute;
-  left: 0;
+  left: 5px;
   top: 10px;
   border-radius: 1px;
   width: 4px;
   height: 4px;
   background: var(--color-accent);
   transform: rotate(-180deg);
+}
+
+@media screen and (min-width: 768px) {
+  .about-me-container {
+    max-width: 704px;
+  }
+  .about__title {
+    font-weight: 400;
+    font-size: 108px;
+    line-height: 1.14815;
+    letter-spacing: 0.02em;
+  }
+  .about__img {
+    display: flex;
+    align-self: self-end;
+    margin-bottom: 0;
+  }
+
+  .about__box {
+    display: flex;
+    gap: 32px;
+  }
+  .about__info {
+    max-width: 336px;
+  }
+  .about__info h3 {
+    font-size: 36px;
+    line-height: 1.33333;
+    letter-spacing: 0.01em;
+  }
+
+  .about__menu li {
+    margin-bottom: 16px;
+  }
+
+  .about__box-bottom {
+    display: flex;
+    gap: 32px;
+  }
+  .about__education,
+  .about__role {
+    max-width: 336px;
+  }
+  .about__education {
+    margin-bottom: 0;
+  }
+
+  .about__education h3,
+  .about__role h3 {
+    font-size: 36px;
+    line-height: 1.33333;
+    letter-spacing: 0.01em;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .about-me-container {
+    max-width: 1216px;
+  }
+  .about__box {
+    justify-content: flex-end;
+    gap: 136px;
+    margin-bottom: 80px;
+  }
+
+  .about__info {
+    max-width: 488px;
+    margin-bottom: 312px;
+  }
+
+  .about__education h3,
+  .about__role h3 {
+    font-size: 36px;
+    line-height: 1.33333;
+    letter-spacing: 0.01em;
+  }
+
+  .about__box-bottom {
+    margin-left: 208px;
+    margin-right: 136px;
+    gap: 136px;
+  }
+  .about__education,
+  .about__role {
+    min-width: 384px;
+  }
 }
