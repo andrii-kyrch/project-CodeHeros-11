@@ -22,7 +22,7 @@
 }
 
 [data-theme='dark'] {
-  --color-bg: var(--black-dt);
+  /* --color-bg: var(--black-dt); */
   --color-fg: var(--white-dt);
 }
 
