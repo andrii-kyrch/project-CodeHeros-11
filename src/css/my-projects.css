@@ -49,6 +49,7 @@
 }
 
 .project-img {
+  display: block;
   width: 100%;
   height: auto;
   margin-bottom: 12px;
@@ -97,6 +98,11 @@
 
 .button-link:hover {
   background-color: #bbbbbb;
+}
+
+.link-icon {
+  stroke: #00b068;
+  fill: #00b068;
 }
 
 /* Кнопка "Load more" */
