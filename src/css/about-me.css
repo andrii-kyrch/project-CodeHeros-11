@@ -1,0 +1,122 @@
+ul,
+li {
+  list-style: none;
+}
+
+.about-me {
+}
+
+.about-me-container {
+  max-width: 1280px;
+  width: 100%;
+  padding: 0 20px 0 20px;
+}
+.about__title h2 {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 108px;
+  font-family: 'Impact', sans-serif;
+  line-height: 124px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--black);
+  margin-bottom: 40px;
+}
+
+.about__box {
+  display: flex;
+  justify-content: flex-end;
+  gap: 140px;
+
+  background-image: url(../img/decor\ bg\ 2.png);
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  min-height: 800px;
+}
+
+.about__img {
+  margin-right: 30px;
+  margin-bottom: 80px;
+  margin-left: 40px;
+  align-self: flex-end;
+}
+
+.about__info {
+  max-width: 480px;
+}
+
+.about__info h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 48px;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: var(--black);
+  margin-bottom: 32px;
+}
+
+.about__info p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: var(--black);
+  margin-bottom: 24px;
+}
+
+.about__info p:last-child {
+  margin-bottom: 0;
+}
+
+.about__box-bottom {
+  display: flex;
+  justify-content: center;
+  gap: 136px;
+  padding-bottom: 60px;
+}
+
+.about__education h3,
+.about__role h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 48px;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: var(--black);
+  margin-bottom: 32px;
+}
+
+.about__menu li {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: var(--black);
+  max-width: 336px;
+  margin-bottom: 16px;
+  padding-left: 20px;
+}
+
+.about__menu li:last-child {
+  margin-bottom: 0;
+}
+
+.about__link {
+  position: relative;
+}
+
+.about__link:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  border-radius: 1px;
+  width: 4px;
+  height: 4px;
+  background: var(--accet-green);
+  transform: rotate(-180deg);
+}
