@@ -1,57 +1,57 @@
 .tech-skills-title {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    border: 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  border: 0;
 }
 .tech-skills-ribbon {
-    background-color: #bcdfd1;
-    display: flex;
-    overflow: hidden;
-    white-space: nowrap;
+  background-color: var(--color-accent);
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .tech-skills-ribbon-rotated {
-    background-color: #E4E5E6;
-    transform: rotate(2deg);
-    display: flex;
-    overflow: hidden;
-    white-space: nowrap;
+  background-color: var(--color-secondary);
+  transform: rotate(2deg);
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .ribbon-content {
-    display: inline-block;
-    padding-left: 100%;
-    animation: marquee 20s linear infinite;
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 20s linear infinite;
 }
 .ribbon-item {
-    display: inline-block;
-    padding: 32px 15px;
+  display: inline-block;
+  padding: 32px 15px;
 }
 .ribbon-item:last-child {
-    padding-left: 30px;
+  padding-left: 30px;
 }
 
 @keyframes marquee {
-    0% {
-        transform: translate(0, 0);
-    }
-    100% {
-        transform: translate(-100%, 0);
-    }
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
 }
 
 /*  Tablet */
 @media screen and (min-width: 768px) {
-    .ribbon-content {
-        animation-duration: 60s;
-    }
-    .ribbon-item {
-        padding: 40px 15px;
-    }
+  .ribbon-content {
+    animation-duration: 60s;
+  }
+  .ribbon-item {
+    padding: 40px 15px;
+  }
 }
 
 .tech-skills-ribbon:hover .ribbon-content {
-    animation-play-state: paused;
+  animation-play-state: paused;
 }
