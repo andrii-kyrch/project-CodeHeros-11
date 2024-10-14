@@ -12,7 +12,7 @@
 }
 
 .logo-second-part {
-  color: var(--color-accent-green);
+  color: var(--color-primary);
 }
 
 .theme-switcher {
@@ -21,26 +21,26 @@
   border: none;
   border-radius: 16px;
   padding: 2px;
-  background-color: var(--light-grey);
+  background-color: var(--color-border);
   transition: background-color 250ms linear;
 }
 
 [aria-label='Switch to light theme'] {
-  background-color: var(--black);
+  background-color: var(--color-border);
 }
 
 .switch {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: var(--color-accent-green);
+  background-color: var(--color-primary);
   transition: transform 250ms linear, background-color 250ms linear,
     box-shadow 250ms linear;
 }
 
 [aria-label='Switch to light theme'] .switch {
   background-color: var(--black);
-  box-shadow: 8px 0 0 0 var(--color-accent-green);
+  box-shadow: 8px 0 0 0 var(--color-primary);
   transform: translateX(16px);
 }
 
@@ -50,7 +50,7 @@
 
 .menu-link:hover,
 .menu-link:focus {
-  color: var(--color-hover-green);
+  color: var(--color-hover-primary);
 }
 
 .open-menu-btn {
