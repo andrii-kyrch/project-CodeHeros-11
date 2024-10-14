@@ -24,7 +24,7 @@
 }
 
 [data-theme='dark'] {
-  --color-bg: var(--black-dt);
+  /* --color-bg: var(--black-dt); */
   --color-fg: var(--white-dt);
   --color-benefits-icon-bg: var(--dark-accet-dt);
   --color-benefits-title-part-fg: var(--accet-green);
