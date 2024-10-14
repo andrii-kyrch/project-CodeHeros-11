@@ -121,6 +121,18 @@
 
 #loadMoreBtn:active {
   opacity: 0.8;
+  padding: 12px 24px;
+  background-color: #f0f0f0;
+  color: #292929;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 30px;
+  text-transform: uppercase;
+}
+
+#loadMoreBtn:hover {
+  color: #00b068;
 }
 
 /* Медіа-запити для адаптивності */
@@ -153,8 +165,8 @@
   }
 
   .project-item-box {
-    display: flex; /* Розташування елементів горизонтально */
-    justify-content: space-between; /* Розподіляємо елементи по краях */
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
   }

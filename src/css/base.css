@@ -16,14 +16,28 @@
   --error: #e74a3b;
 }
 
+[data-theme='light'] {
+  --color-bg: var(--white);
+  --color-fg: var(--black);
+  --color-benefits-icon-bg: var(--light-accent);
+  --color-benefits-title-part-fg: var(--accet-green);
+}
+
+[data-theme='dark'] {
+  --color-bg: var(--black-dt);
+  --color-fg: var(--white-dt);
+  --color-benefits-icon-bg: var(--dark-accet-dt);
+  --color-benefits-title-part-fg: var(--accet-green);
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.03em;
-  color: var(--black);
-  background-color: var(--white);
+  color: var(--color-fg);
+  background-color: var(--color-bg);
 }
 
 .visually-hidden {
