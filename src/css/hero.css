@@ -37,6 +37,10 @@
   transition: background-color 0.3s ease;
 }
 
+[data-theme='dark'] .span-link-hero {
+  background-color: var(--color-hover-primary);
+}
+
 .link-hero:hover .span-link-hero,
 .link-hero:focus .span-link-hero {
   background-color: var(--color-primary);
@@ -213,7 +217,7 @@
     position: absolute;
     width: 356px;
     height: 276px;
-    top: 95px;
+    top: -90px;
     right: 35px;
     background-image: url('/img/hero/pc-bg-hero1.png');
     background-repeat: no-repeat;
