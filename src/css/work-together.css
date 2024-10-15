@@ -38,7 +38,7 @@
 .contact-icons {
   width: 24px;
   height: 24px;
-  margin-bottom: 0;
+  margin-bottom: -5px;
 }
 .contact-info {
   width: 258px;
@@ -107,11 +107,11 @@
   width: 320px;
   height: 48px;
   background-color: var(--color-primary);
-  color: var(--color-text);
   line-height: 1.5;
   letter-spacing: 0.03em;
   font-size: 16px;
   transition: background-color 0.3s ease;
+  color: #f0f0f0;
 }
 
 .form-button:hover {
@@ -298,15 +298,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-image: url('../img/work-together/x-1x-min.png'); */
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-@media screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .png {
-    background-image: url('../img/work-together/faq@2x.jpg');
-  }
 }
 
 .modal-close-btn:hover {
