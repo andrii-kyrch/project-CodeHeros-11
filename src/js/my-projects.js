@@ -7,9 +7,9 @@ const projectList = document.querySelector('.my-projects-list');
 let projectsLoaded = 0;
 const projectsPerLoad = 3;
 
+
 async function fetchProjects() {
   try {
-   
     const response = await axios.get('/api/projects'); 
     return response.data;
   } catch (error) {
@@ -23,6 +23,7 @@ async function fetchProjects() {
   }
 }
 
+// Список всіх проєктів 
 const totalProjects = [
   {
     imgSrc: '/img/img-my-projects/wallet-webservice.jpg',
@@ -96,6 +97,7 @@ const totalProjects = [
   }
 ];
 
+// Функція для завантаження проєктів
 function loadProjects() {
   for (let i = 0; i < projectsPerLoad; i++) {
     if (projectsLoaded < totalProjects.length) {
@@ -121,6 +123,7 @@ function loadProjects() {
     }
   }
 
+  // Якщо всі проекти завантажені, ховаємо кнопку "Load more"
   if (projectsLoaded >= totalProjects.length) {
     loadMoreBtn.style.display = 'none';  
     iziToast.info({
@@ -131,13 +134,16 @@ function loadProjects() {
   }
 }
 
+
 loadMoreBtn.addEventListener('click', loadProjects);
 
+
 document.addEventListener('DOMContentLoaded', () => {
-  loadProjects(); 
+  loadProjects();  
 
-
+  
   if (projectsLoaded < totalProjects.length) {
     loadMoreBtn.style.display = 'block';  
   }
 });
+
