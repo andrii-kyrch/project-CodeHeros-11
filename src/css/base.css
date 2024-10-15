@@ -77,16 +77,23 @@ body {
   overflow: hidden;
 }
 
-.section-margin{
+.section-title {
+  font-family: 'Impact', sans-serif;
+  font-size: 52px;
+  line-height: 1.23;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--color-text);
   margin-bottom: 40px;
 }
-  @media (min-width: 767px) {
-    .section-margin{
-      margin-bottom: 124px;
-    }
-  @media (min-width: 1280px){
-    .section-margin{
-      margin-bottom: 164px;
-    }
+
+.section-title-accent {
+  color: var(--color-primary);
+}
+
+@media screen and (min-width: 768px) {
+  .section-title {
+    font-size: 108px;
+    line-height: 1.48;
   }
 }
