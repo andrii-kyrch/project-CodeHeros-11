@@ -40,9 +40,6 @@ async function loadReviews() {
   renderReviews(reviews);
 
   initCarouselContainer(carouselContainer);
-  renderReviews(reviews);
-
-  initCarouselContainer(carouselContainer);
 }
 
 async function getReviews() {
