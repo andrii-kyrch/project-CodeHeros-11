@@ -1,6 +1,4 @@
 .main-reviews {
-  /* padding-left: 20px;
-  padding-right: 20px; */
   width: 100%;
   min-height: 464px;
   display: flex;
@@ -9,7 +7,7 @@
 }
 
 .title-reviews {
-  font-family: 'Impact', sans-serif;
+  font-family: "Impact", sans-serif;
   font-weight: 400;
   font-size: 52px;
   line-height: 1.23077;
@@ -23,6 +21,7 @@
 }
 
 .carousel {
+  
 }
 
 .carousel-cell {
@@ -54,7 +53,7 @@
 }
 
 .review-text {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-size: 16px;
   line-height: 1.5;
@@ -79,7 +78,7 @@
 }
 
 .userName {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 16px;
   line-height: 1.5;
@@ -88,58 +87,72 @@
 }
 
 .btn-left-right {
-  fill: black;
   display: flex;
   justify-content: flex-end;
   margin-top: 24px;
   margin-right: 20px;
   gap: 10px;
+  padding: 0; 
 }
 
-.btn-prev,
-.btn-next {
-  background: #fff;
-  color: black;
+.btn-prev, .btn-next {
   display: inline-block;
   border: 1px solid #292929;
   border-radius: 8px;
   width: 40px;
   height: 40px;
+  padding-top: 4px;
   &:hover {
-    cursor: pointer;
+    cursor: pointer; 
   }
 }
 
-* {
-  box-sizing: border-box;
+.iconFill:disabled {
+  opacity: 0.8;
+  background: #292929;
+} 
+
+.btn-prev:disabled {
+  border: 1px solid #e4e5e6;
 }
+.btn-next:disabled {
+  border: 1px solid #e4e5e6;
+}
+
+.iconReviewLeft:disabled {
+  color: #e4e5e6;
+  border: 1px solid #e4e5e6;
+}
+.iconReviewRight:disabled {
+  color: #e4e5e6;
+  border: 1px solid #e4e5e6;
+}
+
+* { box-sizing: border-box; }
 
 @media (min-width: 768px) and (max-width: 1280px) {
-  .main-reviews {
-    min-width: 768px;
-    min-height: 472px;
-  }
+.main-reviews {
+  min-width: 768px;
+  min-height: 472px;
+}
 
-  .title-reviews {
-    font-size: 108px;
-    padding-bottom: 60px;
-    line-height: 1.14815;
-    text-align: center;
-  }
+.title-reviews {
+  font-size: 108px;
+  padding-bottom: 60px;
+  line-height: 1.14815;
+  text-align: center;
+}
 
-  .main-list {
-  }
+.review-item {
+  width: 704px;
+  height: 224px;
+}
 
-  .review-item {
-    width: 704px;
-    height: 224px;
-  }
 }
 
 @media (min-width: 1280px) {
+
   .main-reviews {
-    margin-top: 82px;
-    margin-bottom: 82px;
     min-width: 1280px;
     height: 500px;
   }
@@ -153,6 +166,7 @@
   .carousel {
     width: 100%;
     margin-left: -25%;
+
   }
 
   .carousel-cell {
@@ -161,3 +175,11 @@
     margin-left: 16px;
   }
 }
+
+
+
+
+
+
+
+
