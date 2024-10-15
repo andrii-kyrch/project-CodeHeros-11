@@ -4,7 +4,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #f0f0f0;
 }
 
 .my-projects-title {
@@ -14,11 +13,10 @@
   line-height: 64px;
   text-align: center;
   margin-bottom: 40px;
-  color: #292929;
 }
 
 .accent {
-  color: #00b068;
+  color: var(--color-primary);
 }
 
 /* Список проектів */
@@ -33,7 +31,6 @@
 }
 
 .my-projects-item {
-  background-color: #f0f0f0;
   padding: 0 20px;
   text-align: left;
   display: flex;
@@ -49,6 +46,7 @@
 }
 
 .project-img {
+  display: block;
   width: 100%;
   height: auto;
   margin-bottom: 12px;
@@ -60,18 +58,15 @@
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0.03em;
-  color: #292929;
   margin-bottom: 16px;
 }
 
 .project-name {
-  font-family: 'Poppins Medium', sans-serif;
   font-weight: 500;
   font-size: 32px;
   line-height: 125%;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  color: #292929;
   margin-bottom: 16px;
 }
 
@@ -83,36 +78,56 @@
   padding: 12px 24px;
   width: 125px;
   height: 48px;
-  background-color: #e4e5e6;
+  background-color: var(--color-secondary);
   letter-spacing: 0.5px;
   line-height: 28px;
   font-weight: 500;
   font-size: 16px;
   text-transform: uppercase;
-  color: #292929;
   text-decoration: none;
   border-radius: 8px;
   transition: background-color 0.3s ease;
 }
 
 .button-link:hover {
-  background-color: #bbbbbb;
+  background-color: var(--color-hover-secondary);
+}
+
+.link-icon {
+  stroke: #00b068;
+  fill: #00b068;
 }
 
 /* Кнопка "Load more" */
 #loadMoreBtn {
-  padding: 12px 24px;
-  background-color: #007bff;
-  color: white;
+  background-color: var(--color-bg);
   border: none;
-  border-radius: 5px;
-  font-size: 16px;
+  color: var(--color-text);
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-decoration-color: var(--color-primary);
+  font-size: 20px;
+  padding: 10px;
   cursor: pointer;
-  margin-top: 30px;
+  outline: none;
+  transition: color 0.3s, text-decoration-color 0.3s;
 }
 
-#loadMoreBtn:hover {
-  background-color: #0056b3;
+#loadMoreBtn:hover,
+#loadMoreBtn:focus {
+  color: var(--color-primary);
+}
+
+#loadMoreBtn:active {
+  opacity: 0.8;
+  padding: 12px 24px;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 30px;
+  text-transform: uppercase;
 }
 
 /* Медіа-запити для адаптивності */
@@ -145,8 +160,8 @@
   }
 
   .project-item-box {
-    display: flex; /* Розташування елементів горизонтально */
-    justify-content: space-between; /* Розподіляємо елементи по краях */
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
   }
