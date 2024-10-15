@@ -21,14 +21,15 @@
   display: flex;
   overflow: hidden;
   white-space: nowrap;
+  z-index: 2;
 }
-
+[data-theme="dark"] .ribbon-item {
+    color: white;
+}
 .ribbon-item {
   display: inline-block;
   padding: 32px 15px;
   top: 0;
-  background-color: #bcdfd1;
-  z-index: 2;
 }
 .tech-skills-ribbon-rotated {
   bottom: 0;
@@ -55,6 +56,11 @@
 .ribbon-item-rotated {
   color: #00b068;
 }
+
+[data-theme="dark"] .ribbon-item-dot-rotated {
+    fill: white;
+}
+
 .ribbon-item,
 .ribbon-item-rotated {
   display: inline-block;
@@ -92,7 +98,7 @@
     height: 128px;
   }
   .ribbon-item {
-    padding: 40px 15px;
+    padding: 40px 16px;
   }
 }
 .tech-skills-ribbon:hover .ribbon-content {

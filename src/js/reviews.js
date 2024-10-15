@@ -1,17 +1,14 @@
 import axios from 'axios';
+import Flickity from 'flickity';
 
 axios.defaults.baseURL = 'https://portfolio-js.b.goit.study/api';
 
-const reviewsList = document.querySelector('.main-list');
-const carouselContainer = document.querySelectorAll('.carousel-container');
 const carousel = document.querySelector('.carousel');
 const previousButton = document.querySelector('.btn-prev');
 const nextButton = document.querySelector('.btn-next');
-let reviewsCount = 0;
+let flkty;
 
-window.addEventListener('load', event => {
-  loadReviews();
-});
+window.addEventListener('load', loadReviews);
 
 function renderReviews(reviews) {
   const htmlMarkup = reviews
@@ -19,10 +16,10 @@ function renderReviews(reviews) {
       review =>
         `<div class="carousel-cell">
             <div class="review-style">
-                <p class="review-text">${review['review']}</p>
+                <p class="review-text">${review.review}</p>
                 <div class="user-card">
-                  <img class="avatar" src="${review['avatar_url']}" alt="" width="40px"; />
-                  <p class="userName">${review['author']}</p>  
+                  <img class="avatar" src="${review.avatar_url}" alt="${review.author}'s avatar" width="40" height="40" />
+                  <p class="userName">${review.author}</p>  
                 </div> 
             </div>
         </div>`
@@ -33,84 +30,41 @@ function renderReviews(reviews) {
 }
 
 async function loadReviews() {
-  const response = await getReviews();
-  const reviews = response['data'];
-  reviewsCount = reviews.length;
+  try {
+    const response = await getReviews();
+    const reviews = response.data;
 
-  renderReviews(reviews);
-
-  initCarouselContainer(carouselContainer);
+    renderReviews(reviews);
+    initCarousel();
+  } catch (error) {
+    console.error('Error loading reviews:', error);
+  }
 }
 
 async function getReviews() {
   return await axios.get('/reviews');
 }
 
-function initCarouselContainer(container) {
-  var touchStartEvents = {
-    touchstart: true,
-    MSPointerDown: true,
-  };
-
-  var focusNodes = {
-    INPUT: true,
-    SELECT: true,
-  };
-
-  Flickity.prototype.pointerDownFocus = function (event) {
-    // focus element, if not touch, and its not an input or select
-    if (
-      !this.options.accessibility ||
-      touchStartEvents[event.type] ||
-      focusNodes[event.target.nodeName]
-    ) {
-      return;
-    }
-    // hack to fix scroll jump after focus, #76
-    var scrollElem = this.options.scrollElement || window;
-    var scrollProp = this.options.scrollElement ? 'scrollTop' : 'pageYOffset';
-    var prevScrollY = scrollElem[scrollProp];
-
-    this.element.focus();
-    // reset scroll position after focus
-    if (scrollElem[scrollProp] != prevScrollY) {
-      if (this.options.scrollElement) {
-        scrollElem.scrollTop = prevScrollY;
-      } else {
-        scrollElem.scrollTo(scrollElem.pageXOffset, prevScrollY);
-      }
-    }
-  };
-
-  var flkty = new Flickity(carousel, {
-    accessibility: false,
+function initCarousel() {
+  flkty = new Flickity(carousel, {
+    cellAlign: 'center',
+    contain: true,
+    wrapAround: true,
     pageDots: false,
     prevNextButtons: false,
-    scrollElement: document.querySelector('.main-reviews'),
+    adaptiveHeight: true
   });
 
-  previousButton.addEventListener('click', function () {
-    flkty.previous();
-  });
+  previousButton.addEventListener('click', () => flkty.previous());
+  nextButton.addEventListener('click', () => flkty.next());
 
-  nextButton.addEventListener('click', function () {
-    flkty.next();
-  });
+  flkty.on('change', updateButtonStates);
+  updateButtonStates(0);
+}
 
-  flkty.on('change', function (index) {
-    if (index == 0) {
-      previousButton.setAttribute('disabled', true);
-      nextButton.style.background = '#fff';
-      previousButton.style.background = 'grey';
-    } else if (index == reviewsCount - 1) {
-      nextButton.setAttribute('disabled', true);
-      nextButton.style.background = 'grey';
-      previousButton.style.background = '#fff';
-    } else {
-      nextButton.removeAttribute('disabled');
-      previousButton.removeAttribute('disabled');
-      nextButton.style.background = '#fff';
-      previousButton.style.background = '#fff';
-    }
-  });
+function updateButtonStates() {
+  previousButton.disabled = false;
+  nextButton.disabled = false;
+  previousButton.style.background = '#fff';
+  nextButton.style.background = '#fff';
 }
