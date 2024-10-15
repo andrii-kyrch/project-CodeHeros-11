@@ -1,7 +1,7 @@
 .main-reviews {
-  padding-left: 20px;
-  padding-right: 20px;
-  min-width: 360px;
+  /* padding-left: 20px;
+  padding-right: 20px; */
+  width: 100%;
   min-height: 464px;
   display: flex;
   flex-direction: column;
@@ -22,20 +22,24 @@
   padding-bottom: 51px;
 }
 
-.main-list {
-  display: flex;
-  align-items: baseline;
-  gap: 24px;
-  border-radius: 16px;
-  min-width: 320px;
+.carousel {
 }
 
-.review-item {
+.carousel-cell {
   background: #e4e5e6;
   border-radius: 16px;
-  float: left;
-  width: 100%;
-  display: inline;
+  width: calc(100% - 40px);
+  margin-right: 20px;
+  margin-left: 20px;
+  min-height: 200px;
+  counter-increment: carousel-cell;
+}
+
+.carousel-cell:before {
+  display: block;
+  text-align: center;
+  line-height: 200px;
+  font-size: 80px;
 }
 
 .review-style {
@@ -44,10 +48,8 @@
   justify-content: flex-start;
   flex-direction: column;
   gap: 24px;
-  border-radius: 16px;
   padding: 32px;
-  min-width: 320px;
-  width: 320px;
+  width: 100%;
   flex-wrap: wrap;
 }
 
@@ -66,7 +68,6 @@
   justify-content: flex-start;
   flex-direction: row;
   gap: 16px;
-  width: 256px;
   height: 40px;
 }
 
@@ -74,6 +75,7 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  display: block;
 }
 
 .userName {
@@ -85,8 +87,77 @@
   color: #292929;
 }
 
-@media (min-width: 768px) and (max-width: 1280px) {
+.btn-left-right {
+  fill: black;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 24px;
+  margin-right: 20px;
+  gap: 10px;
 }
 
-@media (min-width: 1280px) and (max-width: 1280px) {
+.btn-prev,
+.btn-next {
+  background: #fff;
+  color: black;
+  display: inline-block;
+  border: 1px solid #292929;
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+  .main-reviews {
+    min-width: 768px;
+    min-height: 472px;
+  }
+
+  .title-reviews {
+    font-size: 108px;
+    padding-bottom: 60px;
+    line-height: 1.14815;
+    text-align: center;
+  }
+
+  .main-list {
+  }
+
+  .review-item {
+    width: 704px;
+    height: 224px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .main-reviews {
+    margin-top: 82px;
+    margin-bottom: 82px;
+    min-width: 1280px;
+    height: 500px;
+  }
+
+  .title-reviews {
+    font-size: 108px;
+    line-height: 1.14815;
+    letter-spacing: 0.02em;
+  }
+
+  .carousel {
+    width: 100%;
+    margin-left: -25%;
+  }
+
+  .carousel-cell {
+    width: calc(50% - 32px);
+    margin-right: 16px;
+    margin-left: 16px;
+  }
 }
