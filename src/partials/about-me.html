@@ -1,57 +1,81 @@
 <section class="about-me">
   <div class="container about-me-container">
-    <div class="about__title">
-      <h2>About <span class="accent">Me</span></h2>
-    </div>
-    <div class="about__box">
-      <div class="about__img">
-        <img class="img" src="../img/img.png" alt="" />
+    <h2 class="section-title">
+      About <span class="section-title-accent">Me</span>
+    </h2>
+    <div class="about-me-content">
+      <div class="about-me-img">
+        <picture>
+          <source
+            media="(min-width: 1280px)"
+            srcset="
+              ./img/about-me/about-me-photo-desktop.webp    1x,
+              ./img/about-me/about-me-photo-desktop@2x.webp 2x
+            "
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="
+              ./img/about-me/about-me-photo-tablet.webp    1x,
+              ./img/about-me/about-me-photo-tablet@2x.webp 2x
+            "
+          />
+          <source
+            media="(max-width: 767px)"
+            srcset="
+              ./img/about-me/about-me-photo-mobile.webp    1x,
+              ./img/about-me/about-me-photo-mobile@2x.webp 2x
+            "
+          />
+          <img
+            src="/img/about-me/about-me-photo-mobile.webp"
+            alt="Lloyd Jefferson"
+          />
+        </picture>
       </div>
-      <div class="about__info">
-        <h3>bio</h3>
-        <p>
-          I'm Lloyd Jefferson, a talented programmer specializing in software
-          development. My expertise spans various programming languages and
-          technologies, and I am dedicated to continually enhancing my skills. I
-          thrive on seeking unconventional and creative solutions to problems,
-          leveraging a high level of analytical skills to effectively tackle
-          even the most challenging tasks.
-        </p>
-        <p class="position">
-          Adaptable to both independent and team-oriented work, I collaborate
-          seamlessly with colleagues, exchanging ideas and finding optimal
-          solutions. My professional maturity enables me to navigate challenges
-          and stressful situations with a calm demeanor, maintaining a
-          consistently high quality of work. Committed to self-improvement, I
-          actively engage in studying new technologies and practices to stay
-          current with the latest innovations in the field.
-        </p>
+      <div class="about-me-bio">
+        <h3 class="about-me-subtitle">Bio</h3>
+        <div class="bio-text">
+          <p>
+            I'm Lloyd Jefferson, a talented programmer specializing in software
+            development. My expertise spans various programming languages and
+            technologies, and I am dedicated to continually enhancing my skills.
+            I thrive on seeking unconventional and creative solutions to
+            problems, leveraging a high level of analytical skills to
+            effectively tackle even the most challenging tasks.
+          </p>
+          <p>
+            Adaptable to both independent and team-oriented work, I collaborate
+            seamlessly with colleagues, exchanging ideas and finding optimal
+            solutions. My professional maturity enables me to navigate
+            challenges and stressful situations with a calm demeanor,
+            maintaining a consistently high quality of work. Committed to
+            self-improvement, I actively engage in studying new technologies and
+            practices to stay current with the latest innovations in the field.
+          </p>
+        </div>
       </div>
-    </div>
-
-    <div class="about__box-bottom">
-      <div class="about__education">
-        <h3>EDUCATION</h3>
-        <ul class="about__menu">
-          <li class="about__link">
+      <div class="about-me-edu">
+        <h3 class="about-me-subtitle">EDUCATION</h3>
+        <ul class="edu-list">
+          <li class="edu-item">
             2018 - 2019 / Frontend Development Diploma, GoIT IT School, New York
           </li>
-          <li class="about__link">
+          <li class="edu-item">
             2019 - 2020 / Advanced Web Development Certificate, GoIT IT School,
             New York
           </li>
-          <li class="about__link">
+          <li class="edu-item">
             2020 - 2022 / Advanced Blender Animation Techniques, Udemy
           </li>
         </ul>
       </div>
-
-      <div class="about__role">
-        <h3>ROLE</h3>
-        <ul class="about__menu">
-          <li class="about__link">Frontend development</li>
-          <li class="about__link">HeadlessCMS, Wordpress</li>
-          <li class="about__link">Blender (enjoy)</li>
+      <div class="about-me-role">
+        <h3 class="about-me-subtitle">ROLE</h3>
+        <ul class="role-list">
+          <li class="role-item">Frontend development</li>
+          <li class="role-item">HeadlessCMS, Wordpress</li>
+          <li class="role-item">Blender (enjoy)</li>
         </ul>
       </div>
     </div>
