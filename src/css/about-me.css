@@ -17,7 +17,7 @@
   justify-content: flex-end;
   gap: 140px;
 
-  background-image: url(../img/decor\ bg\ 2.png);
+  background-image: url(../img/about-me/decor-bg-2.png);
   background-position: right bottom;
   background-repeat: no-repeat;
   min-height: 800px;
@@ -131,6 +131,7 @@
   }
 
   .about__box {
+    background-image: url(../img/about-me/decor-bg-2-tab.png);
     display: flex;
     gap: 32px;
   }
@@ -172,6 +173,7 @@
     max-width: 1216px;
   }
   .about__box {
+    background-image: url(../img/about-me/decor-bg-2-desk.png);
     justify-content: flex-end;
     gap: 136px;
     margin-bottom: 80px;
