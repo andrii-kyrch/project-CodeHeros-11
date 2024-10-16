@@ -1,51 +1,41 @@
-.benefits{
+.benefits-container {
   position: relative;
 }
-.benefits-title{
-  font-family: "Impact", sans-serif;
-  font-weight: 400;
-  font-size: 52px;
-  line-height: 1.23;
-  text-transform: uppercase;
+.benefits-title {
   margin-bottom: 40px;
 }
-.benefits-title-part {
-  color: var(--color-benefits-title-part-fg);
-}
-.benefits-list{
+
+.benefits-list {
   display: flex;
   flex-direction: column;
   gap: 32px;
 }
-.benefits-item{
+.benefits-item {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
-.benefits-item-icon-wrapper{
+.benefits-item-icon-wrapper {
   width: fit-content;
   padding: 12px;
   line-height: 0;
   border-radius: 8px;
   background-color: var(--color-benefits-icon-bg);
 }
-.benefits-item-title{
+.benefits-item-title {
   font-weight: 400;
   font-size: 18px;
   line-height: 156%;
   text-transform: uppercase;
 }
 @media (min-width: 767px) {
-  .benefits-title{
-    line-height: 115%;
-    letter-spacing: 0.02em;
+  .benefits-title {
     margin-bottom: 0;
   }
   .benefits-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 32px;                        
-    list-style: none;           
+    gap: 32px;
   }
   .benefits-item {
     display: flex;
@@ -68,22 +58,22 @@
     grid-column: 1;
     grid-row: 3;
   }
-  .benefits-list{
+  .benefits-list {
     flex-wrap: wrap;
   }
-  .benefits-title{
+  .benefits-title {
     font-size: 108px;
   }
-  .benefits-item-title{
+  .benefits-item-title {
     font-size: 20px;
-    line-height: 160%
+    line-height: 160%;
   }
 }
-@media (min-width: 1280px){
-  .benefits{
+@media (min-width: 1280px) {
+  .benefits-container {
     padding-top: 276px;
   }
-  .benefits-title{
+  .benefits-title {
     position: absolute;
     top: 0;
     max-width: 681px;
@@ -125,10 +115,10 @@
     background-size: 522px 407px;
   }
   @media screen and (min-device-pixel-ratio: 2),
-  screen and (min-resolution: 192dpi),
-  screen and (min-resolution: 2dppx) {
-      .benefits-image {
-        background-image: url('../img/benefits/benefits-image-2x.png');
-       }
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    .benefits-image {
+      background-image: url('../img/benefits/benefits-image-2x.png');
+    }
   }
 }

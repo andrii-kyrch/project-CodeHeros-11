@@ -1,4 +1,4 @@
-.page-header {
+.page-header-container {
   padding-top: 16px;
   padding-bottom: 16px;
 }
@@ -132,13 +132,10 @@
 }
 
 @media screen and (min-width: 768px) {
-  .page-header {
-    padding-top: 32px;
-    padding-bottom: 32px;
-  }
-
   .page-header-container {
     position: relative;
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 
   .page-header .logo {
@@ -148,7 +145,7 @@
 
   .theme-switcher {
     position: absolute;
-    top: 4px;
+    top: 36px;
     right: 377px;
   }
 

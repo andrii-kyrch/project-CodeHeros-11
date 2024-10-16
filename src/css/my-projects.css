@@ -1,5 +1,5 @@
 /* Базові стилі для секції проектів */
-.my-projects {
+.my-projects-container {
   padding: 0 20px;
   display: flex;
   flex-direction: column;
@@ -7,16 +7,8 @@
 }
 
 .my-projects-title {
-  font-family: 'Impact', sans-serif;
-  font-size: 52px;
-  letter-spacing: 1.8px;
-  line-height: 64px;
   text-align: center;
   margin-bottom: 40px;
-}
-
-.accent {
-  color: var(--color-primary);
 }
 
 /* Список проектів */
@@ -153,12 +145,6 @@
 
 /* Tablet і Desktop (від 768px і більше) */
 @media (min-width: 768px) {
-  .my-projects-title {
-    font-size: 108px;
-    letter-spacing: 1.8px;
-    line-height: 124px;
-  }
-
   .project-item-box {
     display: flex;
     justify-content: space-between;

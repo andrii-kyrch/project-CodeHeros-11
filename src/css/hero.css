@@ -1,9 +1,13 @@
 /* mobile */
+.hero {
+  padding-top: 0;
+}
+
 .hiddden {
   display: none;
 }
 
-.hero {
+.hero-container {
   padding-top: 56px;
 }
 
@@ -131,7 +135,7 @@
 }
 /* tablet */
 @media (min-width: 768px) {
-  .hero {
+  .hero-container {
     padding-top: 44px;
     padding-bottom: 62px;
   }
@@ -204,9 +208,9 @@
     margin-top: 80px;
   }
 }
-/* descktop */
-@media (min-width: 1280px) {
-  .hero {
+/* Desktop */
+@media screen and (min-width: 1280px) {
+  .hero-container {
     padding-top: 84px;
     padding-bottom: 82px;
   }
@@ -260,7 +264,7 @@
   .photo-hero {
     display: block;
     position: absolute;
-    top: 25px;
+    top: 105px;
     left: 55%;
     transform: translateX(-50%);
     width: 108px;

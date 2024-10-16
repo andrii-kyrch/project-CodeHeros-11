@@ -1,4 +1,4 @@
-.tech-skills-section {
+.tech-skills-container {
   position: relative;
   width: 100%;
 }
@@ -27,7 +27,7 @@
   display: inline-block;
   padding: 32px 15px;
   top: 0;
-  background-color: #bcdfd1;
+  background-color: var(--color-accent);
   z-index: 2;
 }
 .tech-skills-ribbon-rotated {
@@ -50,7 +50,6 @@
   animation: marquee 70s linear infinite;
 }
 .ribbon-item {
-  color: #292929;
 }
 .ribbon-item-rotated {
   color: #00b068;

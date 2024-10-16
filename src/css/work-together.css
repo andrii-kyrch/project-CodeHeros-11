@@ -3,20 +3,11 @@
 }
 
 .bold {
-  font-family: 'Impact', sans-serif;
-  font-size: 52px;
-  line-height: 1.23;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
   /* margin-right: 57px; */
   margin-bottom: 40px;
   width: 253px;
   height: 128px;
   text-align: left;
-}
-
-.green {
-  color: var(--color-primary);
 }
 
 .png {

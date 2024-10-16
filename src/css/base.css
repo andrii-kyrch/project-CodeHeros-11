@@ -58,8 +58,8 @@ body {
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
   font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.03em;
+  line-height: 24px;
+  letter-spacing: 0.2px;
   color: var(--color-text);
   background-color: var(--color-bg);
 }
@@ -77,11 +77,17 @@ body {
   overflow: hidden;
 }
 
+.page-section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
 .section-title {
   font-family: 'Impact', sans-serif;
+  font-weight: 400;
   font-size: 52px;
-  line-height: 1.23;
-  letter-spacing: 0.03em;
+  line-height: 64px;
+  letter-spacing: 1.8px;
   text-transform: uppercase;
   color: var(--color-text);
   margin-bottom: 40px;
@@ -92,8 +98,20 @@ body {
 }
 
 @media screen and (min-width: 768px) {
+  .about-me {
+    padding-top: 62px;
+    padding-bottom: 62px;
+  }
+
   .section-title {
     font-size: 108px;
-    line-height: 1.48;
+    line-height: 124px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .page-section {
+    padding-top: 82px;
+    padding-bottom: 82px;
   }
 }

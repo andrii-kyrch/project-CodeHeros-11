@@ -1,5 +1,4 @@
 .page-footer {
-  padding-top: 40px;
   padding-bottom: 24px;
 }
 
@@ -41,9 +40,6 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .page-footer {
-    padding-top: 62px;
-  }
   .footer-social-list {
     flex-direction: row;
     column-gap: 40px;
@@ -55,9 +51,6 @@
 }
 
 @media screen and (min-width: 1280px) {
-  .page-footer {
-    padding-top: 82px;
-  }
   .footer-container {
     display: flex;
     flex-wrap: wrap;
