@@ -70,7 +70,7 @@
 .faq-icon {
   flex-shrink: 0;
   stroke: var(--color-text);
-  fill: var(--color-text);
+  fill: var(--color-accent);
   transition: transform 0.5s ease;
 }
 
