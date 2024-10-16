@@ -46,6 +46,26 @@ button.addEventListener('click', event => {
   currentThemeSetting = newTheme;
 });
 
+function disableScroll() {
+  const scrollPosition = window.scrollY;
+
+  document.body.style.overflow = 'hidden';
+  document.body.style.position = 'fixed';
+  document.body.style.top = `-${scrollPosition}px`;
+  document.body.style.width = '100%';
+}
+
+function enableScroll() {
+  const scrollPosition = Math.abs(parseInt(document.body.style.top, 10));
+
+  document.body.style.overflow = '';
+  document.body.style.position = '';
+  document.body.style.top = '';
+  document.body.style.width = '';
+
+  window.scrollTo(0, scrollPosition);
+}
+
 const openMenuBtn = document.querySelector('.open-menu-btn');
 const mobileMenu = document.querySelector('.menu');
 const menuLinks = document.querySelectorAll('.menu-link');
@@ -53,7 +73,11 @@ const menuLinks = document.querySelectorAll('.menu-link');
 openMenuBtn.addEventListener('click', () => {
   mobileMenu.classList.toggle('is-open');
   openMenuBtn.classList.toggle('active');
-  document.body.classList.toggle('no-scroll');
+  if (mobileMenu.classList.contains('is-open')) {
+    disableScroll();
+  } else {
+    enableScroll();
+  }
 });
 
 menuLinks.forEach(link => {
