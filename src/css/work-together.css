@@ -6,7 +6,7 @@
   /* margin-right: 57px; */
   margin-bottom: 40px;
   width: 253px;
-  height: 128px;
+  /* height: 128px; */
   text-align: left;
 }
 
@@ -33,7 +33,7 @@
 }
 .contact-info {
   width: 258px;
-  height: 104px;
+  /* height: 104px; */
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -64,6 +64,10 @@
   width: 320px;
   height: 48px;
   background: var(--color-border);
+}
+
+.input-email.error {
+  color:  red;
 }
 
 .error-message {
@@ -114,7 +118,7 @@
     /* margin-right: 209px; */
     margin-bottom: 60px;
     width: 513px;
-    height: 248px;
+    /* height: 248px; */
     position: relative;
   }
 
@@ -147,7 +151,7 @@
 
   .contact-info {
     width: 639px;
-    height: 24px;
+    /* height: 24px; */
     margin-bottom: 60px;
     flex-direction: row;
   }
@@ -208,7 +212,7 @@
 
   .contact-info {
     width: 258px;
-    height: 104px;
+    /* height: 104px; */
     flex-direction: column;
   }
 
@@ -325,4 +329,8 @@
     border: 1px solid #f0f0f0;
     padding: 64px;
   }
+}
+
+.modal-close-icon {
+  stroke:#292929
 }
