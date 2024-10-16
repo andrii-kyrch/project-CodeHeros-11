@@ -111,9 +111,6 @@
 
 @media screen and (min-width: 768px) {
   .bold {
-    font-size: 108px;
-    line-height: 1.15;
-    letter-spacing: 0.02em;
     /* margin-right: 209px; */
     margin-bottom: 60px;
     width: 513px;
