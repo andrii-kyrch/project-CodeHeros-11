@@ -53,6 +53,7 @@ const menuLinks = document.querySelectorAll('.menu-link');
 openMenuBtn.addEventListener('click', () => {
   mobileMenu.classList.toggle('is-open');
   openMenuBtn.classList.toggle('active');
+  document.body.classList.toggle('no-scroll');
 });
 
 menuLinks.forEach(link => {

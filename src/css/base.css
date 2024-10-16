@@ -64,6 +64,10 @@ body {
   background-color: var(--color-bg);
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
