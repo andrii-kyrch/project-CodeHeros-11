@@ -77,6 +77,32 @@
   }
 }
 
+.tech-skills-ribbon::before,
+.tech-skills-ribbon-rotated::before,
+.tech-skills-ribbon::after,
+.tech-skills-ribbon-rotated::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 10%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.tech-skills-ribbon::before,
+.tech-skills-ribbon-rotated::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0));
+}
+
+.tech-skills-ribbon::after,
+.tech-skills-ribbon-rotated::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(255,255,255,1), rgba(255,255,255,0));
+}
+
+
 /*  Tablet */
 @media screen and (min-width: 768px) {
   .tech-skills-ribbons {
