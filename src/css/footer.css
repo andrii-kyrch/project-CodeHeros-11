@@ -4,7 +4,11 @@
 
 .footer-container {
   border-top: 1px solid var(--color-secondary);
-  padding-top: 40px;
+}
+
+.footer-nav {
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .page-footer .logo {
@@ -18,7 +22,6 @@
   display: flex;
   flex-direction: column;
   row-gap: 24px;
-  margin-bottom: 40px;
 }
 
 .footer-social-list a {
@@ -52,9 +55,20 @@
 
 @media screen and (min-width: 1280px) {
   .footer-container {
+  }
+
+  .footer-nav {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-social-list {
+    margin-left: auto;
+    margin-bottom: 0;
+  }
+
+  .page-footer .logo {
+    margin-bottom: 0;
   }
 
   .copyright {
