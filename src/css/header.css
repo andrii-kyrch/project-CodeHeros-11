@@ -76,9 +76,10 @@
     transition: right 0.5s ease;
     background-color: var(--color-bg);
     background-image: url('../img/header/mobile-menu-bg.png');
-    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    background-size: contain;
+    background-origin: content-box;
   }
 
   @media screen and (min-resolution: 192dpi) {
