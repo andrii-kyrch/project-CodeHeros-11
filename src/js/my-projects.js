@@ -1,149 +1,76 @@
-import axios from 'axios';
+// Імпорт бібліотеки iziToast
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
+// Знаходимо елементи DOM
 const loadMoreBtn = document.getElementById('loadMoreBtn');
-const projectList = document.querySelector('.my-projects-list');
-let projectsLoaded = 0;
-const projectsPerLoad = 3;
+const projectListItems = document.querySelectorAll('.my-projects-item');
+let projectsLoaded = 0; // Кількість завантажених проектів
+const projectsPerLoad = 3; // Скільки проектів завантажувати за один раз
 
+// Функція для початкового приховування всіх проектів, крім перших 3
+function initProjects() {
+  console.log('Initializing projects...');
+  
+  projectListItems.forEach((item, index) => {
+    if (index >= projectsPerLoad) {
+      item.style.display = 'none'; // Ховаємо всі проекти, крім перших 3
+    }
+  });
 
-async function fetchProjects() {
-  try {
-    const response = await axios.get('/api/projects'); 
-    return response.data;
-  } catch (error) {
-    console.error('Error fetching projects:', error);
-    iziToast.error({
-      title: 'Error',
-      message: 'Failed to load projects. Please try again later.',
-      position: 'topRight',
-    });
-    return [];
+  // Якщо є більше проектів для завантаження, показуємо кнопку
+  if (projectListItems.length > projectsPerLoad) {
+    loadMoreBtn.style.display = 'block';
+    console.log('Load more button displayed');
+  } else {
+    loadMoreBtn.style.display = 'none';
   }
 }
 
-// Список всіх проєктів 
-const totalProjects = [
-  {
-    imgSrc: '/img/img-my-projects/wallet-webservice.jpg',
-    altText: 'Wallet Webservice',
-    skills: 'React, JavaScript, Node JS, Git',
-    name: 'Wallet Webservice',
-    githubLink: 'https://github.com/project-repo'
-  },
-  {
-    imgSrc: '/img/img-my-projects/green-harvest-online-store.jpg',
-    altText: 'Green harvest online store',
-    skills: 'React, JavaScript, Node JS, Git',
-    name: 'Green harvest online store',
-    githubLink: 'https://github.com/project-repo'
-  },
-  {
-    imgSrc: '/img/img-my-projects/english-excellence-webservice.jpg',
-    altText: 'English excellence webservice',
-    skills: 'React, JavaScript, Node JS, Git',
-    name: 'English excellence webservice',
-    githubLink: 'https://github.com/project-repo'
-  },
-  {
-    imgSrc: '/img/img-my-projects/power-pulse-webservice.jpg',
-    altText: 'Power pulse webservice',
-    skills: 'React, JavaScript, Node JS, Git',
-    name: 'Power pulse webservice',
-    githubLink: 'https://github.com/project-repo'
-  },
-  {
-    imgSrc: '/img/img-my-projects/mimino-website.jpg',
-    altText: 'Mimino website',
-    skills: 'React, JavaScript, Node JS, Git',
-    name: 'Mimino website',
-    githubLink: 'https://github.com/project-repo'
-  },
-  {
-    imgSrc: '/img/img-my-projects/vyshyvanka-vibes-landing-page.jpg',
-    altText: 'Vyshyvanka vibes Landing Page',
-    skills: 'React, JavaScript, Node JS, Git',
-    name: 'Vyshyvanka vibes Landing Page',
-    githubLink: 'https://github.com/project-repo'
-  },
-  {
-    imgSrc: '/img/img-my-projects/chego-jewelry-website.jpg',
-    altText: 'Chego jewelry website',
-    skills: 'React, JavaScript, Node JS, Git',
-    name: 'Chego jewelry website',
-    githubLink: 'https://github.com/project-repo'
-  },
-  {
-    imgSrc: '/img/img-my-projects/energy-flow-webservice.jpg',
-    altText: 'Energy flow webservice',
-    skills: 'React, JavaScript, Node JS, Git',
-    name: 'Energy flow webservice',
-    githubLink: 'https://github.com/project-repo'
-  },
-  {
-    imgSrc: '/img/img-my-projects/fruitbox-online-store.jpg',
-    altText: 'Fruitbox online store',
-    skills: 'React, JavaScript, Node JS, Git',
-    name: 'Fruitbox online store',
-    githubLink: 'https://github.com/project-repo'
-  },
-  {
-    imgSrc: '/img/img-my-projects/starlight-studio-landing-page.jpg',
-    altText: 'Starlight studio landing page',
-    skills: 'React, JavaScript, Node JS, Git',
-    name: 'Starlight studio landing page',
-    githubLink: 'https://github.com/project-repo'
-  }
-];
+// Функція для завантаження наступних проектів при кліку на кнопку
+function loadMoreProjects() {
+  console.log('Load more clicked');
+  
+  const remainingProjects = projectListItems.length - projectsLoaded;
+  const projectsToLoad = Math.min(remainingProjects, projectsPerLoad);
 
-// Функція для завантаження проєктів
-function loadProjects() {
-  for (let i = 0; i < projectsPerLoad; i++) {
-    if (projectsLoaded < totalProjects.length) {
-      const project = totalProjects[projectsLoaded];
-
-      const li = document.createElement('li');
-      li.classList.add('my-projects-item');
-      li.innerHTML = `
-        <img class="project-img" src="${project.imgSrc}" alt="${project.altText}" />
-        <p class="hard-skills">${project.skills}</p>
-        <div class="project-item-box">
-          <h3 class="project-name">${project.name}</h3>
-          <a href="${project.githubLink}" target="_blank" class="button-link">
-            Visit
-            <svg class="link-icon" width="24" height="24">
-              <use href="/img/sprite.svg#arrow"></use>
-            </svg>
-          </a>
-        </div>
-      `;
-      projectList.appendChild(li);
-      projectsLoaded++;
-    }
+  // Показуємо наступні проекти
+  for (let i = 0; i < projectsToLoad; i++) {
+    const project = projectListItems[projectsLoaded + i];
+    project.style.display = 'block'; 
   }
 
-  // Якщо всі проекти завантажені, ховаємо кнопку "Load more"
-  if (projectsLoaded >= totalProjects.length) {
-    loadMoreBtn.style.display = 'none';  
+  // Плавний скрол до останнього завантаженого проекту
+  const lastVisibleProject = projectListItems[projectsLoaded + projectsToLoad - 1];
+  if (lastVisibleProject) {
+    lastVisibleProject.scrollIntoView({ behavior: 'smooth', block: 'end' });
+  }
+
+  // Оновлюємо кількість завантажених проектів
+  projectsLoaded += projectsToLoad;
+  console.log(`Projects loaded: ${projectsLoaded}`);
+
+  // Якщо завантажені всі проекти
+  if (projectsLoaded >= projectListItems.length) {
+    loadMoreBtn.style.display = 'none'; 
+    console.log('All projects loaded, hiding load more button');
+
+    // Використовуємо iziToast для показу повідомлення
     iziToast.info({
       title: 'Info',
       message: 'There are no more projects to display.',
-      position: 'topRight',
+      position: 'topRight', 
+      timeout: 3000, 
     });
   }
 }
 
-
-loadMoreBtn.addEventListener('click', loadProjects);
-
-
+// Початкове налаштування проектів при завантаженні сторінки
 document.addEventListener('DOMContentLoaded', () => {
-  loadProjects();  
-
+  console.log('DOM fully loaded and parsed');
   
-  if (projectsLoaded < totalProjects.length) {
-    loadMoreBtn.style.display = 'block';  
-  }
-});
+  initProjects();
 
+  // Додаємо подію на кнопку для завантаження більше проектів
+  loadMoreBtn.addEventListener('click', loadMoreProjects);
+});
