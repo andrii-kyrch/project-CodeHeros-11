@@ -1,5 +1,4 @@
 import axios from 'axios';
-import Flickity from 'flickity';
 
 axios.defaults.baseURL = 'https://portfolio-js.b.goit.study/api';
 
@@ -8,7 +7,7 @@ const carouselContainer = document.querySelectorAll('.carousel-container');
 const carousel = document.querySelector('.carousel');
 const previousButton = document.querySelector('.btn-prev');
 const nextButton = document.querySelector('.btn-next');
-let flkty;
+let reviewsCount = 0;
 
 window.addEventListener('load', event => {
   loadReviews();
