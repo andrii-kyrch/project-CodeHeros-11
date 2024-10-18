@@ -21,7 +21,7 @@ function loadProjects() {
           <a href="${project.githubLink}" target="_blank" class="button-link">
             Visit
             <svg class="link-icon" width="24" height="24">
-              <use href="./img/icons.svg#arrow"></use>
+              <use href="/img/icons.svg#arrow"></use>
             </svg>
           </a>
         </div>
@@ -43,70 +43,70 @@ function loadProjects() {
 
 const totalProjects = [
   {
-    imgSrc: './img/my-projects/wallet-webservice.webp',
+    imgSrc: '/img/my-projects/wallet-webservice.webp',
     altText: 'Wallet Webservice',
     skills: 'React, JavaScript, Node JS, Git',
     name: 'Wallet Webservice',
     githubLink: 'https://github.com/project-repo',
   },
   {
-    imgSrc: './img/my-projects/green-harvest-online-store.webp',
+    imgSrc: '/img/my-projects/green-harvest-online-store.webp',
     altText: 'Green harvest online store',
     skills: 'React, JavaScript, Node JS, Git',
     name: 'Green harvest online store',
     githubLink: 'https://github.com/project-repo',
   },
   {
-    imgSrc: './img/my-projects/english-excellence-webservice.webp',
+    imgSrc: '/img/my-projects/english-excellence-webservice.webp',
     altText: 'English excellence webservice',
     skills: 'React, JavaScript, Node JS, Git',
     name: 'English excellence webservice',
     githubLink: 'https://github.com/project-repo',
   },
   {
-    imgSrc: './img/my-projects/power-pulse-webservice.webp',
+    imgSrc: '/img/my-projects/power-pulse-webservice.webp',
     altText: 'Power pulse webservice',
     skills: 'React, JavaScript, Node JS, Git',
     name: 'Power pulse webservice',
     githubLink: 'https://github.com/project-repo',
   },
   {
-    imgSrc: './img/my-projects/mimino-website.webp',
+    imgSrc: '/img/my-projects/mimino-website.webp',
     altText: 'Mimino website',
     skills: 'React, JavaScript, Node JS, Git',
     name: 'Mimino website',
     githubLink: 'https://github.com/project-repo',
   },
   {
-    imgSrc: './img/my-projects/vyshyvanka-vibes-landing-page.webp',
+    imgSrc: '/img/my-projects/vyshyvanka-vibes-landing-page.webp',
     altText: 'Vyshyvanka vibes Landing Page',
     skills: 'React, JavaScript, Node JS, Git',
     name: 'Vyshyvanka vibes Landing Page',
     githubLink: 'https://github.com/project-repo',
   },
   {
-    imgSrc: './img/my-projects/chego-jewelry-website.webp',
+    imgSrc: '/img/my-projects/chego-jewelry-website.webp',
     altText: 'Chego jewelry website',
     skills: 'React, JavaScript, Node JS, Git',
     name: 'Chego jewelry website',
     githubLink: 'https://github.com/project-repo',
   },
   {
-    imgSrc: './img/my-projects/energy-flow-webservice.webp',
+    imgSrc: '/img/my-projects/energy-flow-webservice.webp',
     altText: 'Energy flow webservice',
     skills: 'React, JavaScript, Node JS, Git',
     name: 'Energy flow webservice',
     githubLink: 'https://github.com/project-repo',
   },
   {
-    imgSrc: './img/my-projects/fruitbox-online-store.webp',
+    imgSrc: '/img/my-projects/fruitbox-online-store.webp',
     altText: 'Fruitbox online store',
     skills: 'React, JavaScript, Node JS, Git',
     name: 'Fruitbox online store',
     githubLink: 'https://github.com/project-repo',
   },
   {
-    imgSrc: './img/my-projects/starlight-studio-landing-page.webp',
+    imgSrc: '/img/my-projects/starlight-studio-landing-page.webp',
     altText: 'Starlight studio landing page',
     skills: 'React, JavaScript, Node JS, Git',
     name: 'Starlight studio landing page',
