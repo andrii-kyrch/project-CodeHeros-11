@@ -6,7 +6,7 @@ import{i as w,a as E,S as x,N as P,K as T}from"./assets/vendor-vv4MlyBQ.js";(fun
           <a href="${e.githubLink}" target="_blank" class="button-link">
             Visit
             <svg class="link-icon" width="24" height="24">
-              <use href="/img/icons.svg#arrow"></use>
+              <use href="./img/icons.svg#arrow"></use>
             </svg>
           </a>
         </div>
