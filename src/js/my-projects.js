@@ -21,7 +21,7 @@ function loadProjects() {
           <a href="${project.githubLink}" target="_blank" class="button-link">
             Visit
             <svg class="link-icon" width="24" height="24">
-              <use href="./img/icons.svg#arrow"></use>
+              <use href="${./img/icons.svg#arrow}"></use>
             </svg>
           </a>
         </div>
@@ -43,8 +43,7 @@ function loadProjects() {
 
 const totalProjects = [
   {
-    imgSrc:
-      '/project-CodeHeros/assets/img-my-projects/chego-jewelry-website.webp',
+    imgSrc: "${./img/my-projects/wallet-webservice.webp}",
     altText: 'Wallet Webservice',
     skills: 'React, JavaScript, Node JS, Git',
     name: 'Wallet Webservice',
