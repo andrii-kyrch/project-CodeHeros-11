@@ -123,3 +123,8 @@ body {
     padding-bottom: 82px;
   }
 }
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
