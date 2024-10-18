@@ -1,142 +1,66 @@
-.reviews-container {
-  width: 100%;
-  min-height: 464px;
-  display: flex;
+.swiper {
+  margin-bottom: 24px;
+  height: 100%;
+}
+
+.swiper-slide {
+  height: auto !important;
+  display: flex !important;
   flex-direction: column;
-  gap: 10px;
-}
-
-.title-reviews {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 51px;
-}
-
-.carousel-container {
-  width: 100%;
-  overflow: hidden;
-}
-
-.carousel {
-  width: 100%;
-}
-
-.carousel-cell {
-  background: var(--color-border);
-  border-radius: 16px;
-  margin-right: 20px;
-  min-height: 200px;
-}
-
-.review-style {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: column;
-  gap: 24px;
+  justify-content: space-between;
   padding: 32px;
-  width: 100%;
-  flex-wrap: wrap;
+  border-radius: 16px;
+  background-color: var(--color-secondary);
 }
 
-.review-text {
+.reviews-text {
+  margin-bottom: 24px;
 }
 
-.user-card {
+.reviews-author {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  flex-direction: row;
-  gap: 16px;
-  height: 40px;
+  column-gap: 16px;
+  font-weight: 600;
+  margin-top: auto;
 }
 
-.avatar {
+.reviews-author img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  display: block;
 }
 
-.userName {
-  font-weight: 600;
+.reviews-buttons {
+  display: flex;
+  column-gap: 16px;
+  justify-content: flex-end;
 }
 
-.btn-left-right {
+.reviews-prev-btn,
+.reviews-next-btn {
   display: flex;
   justify-content: center;
-  margin-top: 24px;
-  gap: 10px;
-  padding: 0;
-}
-
-.btn-prev,
-.btn-next {
-  display: inline-block;
-  border: 1px solid #292929;
+  align-items: center;
+  border: 1px solid var(--color-secondary);
   border-radius: 8px;
   width: 40px;
   height: 40px;
-  padding-top: 4px;
-  &:hover {
-    cursor: pointer;
-  }
+  background-color: var(--color-bg);
+  fill: none;
+  stroke: var(--color-text);
+  transition: background-color 250ms ease, stroke 250ms ease;
 }
 
-.iconFill:disabled {
-  opacity: 0.8;
-  background: #292929;
+.reviews-prev-btn:disabled,
+.reviews-next-btn:disabled {
+  cursor: default;
+  stroke: var(--color-secondary);
 }
 
-.btn-prev:disabled {
-  border: 1px solid #e4e5e6;
-}
-.btn-next:disabled {
-  border: 1px solid #e4e5e6;
-}
-
-.iconReviewLeft:disabled {
-  color: #e4e5e6;
-  border: 1px solid #e4e5e6;
-}
-.iconReviewRight:disabled {
-  color: #e4e5e6;
-  border: 1px solid #e4e5e6;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-@media (min-width: 768px) and (max-width: 1280px) {
-  .reviews-container {
-    min-width: 768px;
-    min-height: 472px;
-  }
-
-  .title-reviews {
-    padding-bottom: 60px;
-    text-align: center;
-  }
-
-  .review-item {
-    width: 704px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .main-reviews {
-    min-width: 1280px;
-    height: 500px;
-  }
-
-  .carousel {
-    width: 100%;
-    margin-left: -25%;
-  }
-
-  .carousel-cell {
-    width: calc(50% - 32px);
-  }
+.reviews-prev-btn:hover:not(:disabled),
+.reviews-prev-btn:focus:not(:disabled),
+.reviews-next-btn:hover:not(:disabled),
+.reviews-next-btn:focus:not(:disabled) {
+  background-color: var(--color-secondary);
 }

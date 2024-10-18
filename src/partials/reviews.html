@@ -1,63 +1,22 @@
-<div class="reviews page-section">
+<section class="reviews page-section">
   <div class="container reviews-container">
     <h2 class="title-reviews section-title">REVIEWS</h2>
-    <div class="carousel-container">
-      <div class="carousel"></div>
+
+    <div class="swiper">
+      <ul class="reviews-list swiper-wrapper"></ul>
     </div>
 
-    <div class="btn-left-right">
-      <button class="btn-prev" type="button">
-        <svg
-          class="iconReviewLeft"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M20 12H4.00001"
-            stroke="#292929"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-          <path
-            d="M10 18L4 12L10 6"
-            stroke="#292929"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
+    <div class="reviews-buttons">
+      <button class="reviews-prev-btn" type="button">
+        <svg width="24" height="24">
+          <use href="../img/sprite.svg#icon-prev-btn"></use>
         </svg>
       </button>
-      <button class="btn-next" type="button">
-        <svg
-          class="iconReviewRight"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M4 12H20"
-            stroke="#292929"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-          <path
-            d="M14 6L20 12L14 18"
-            stroke="#292929"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
+      <button class="reviews-next-btn" type="button">
+        <svg width="24" height="24">
+          <use href="../img/sprite.svg#icon-next-btn"></use>
         </svg>
       </button>
     </div>
   </div>
-
-  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-</div>
+</section>
