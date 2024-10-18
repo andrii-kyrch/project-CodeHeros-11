@@ -3,7 +3,7 @@ import{i as w,a as C,S as E,N as H,K as x}from"./assets/vendor-vv4MlyBQ.js";(fun
         <p class="hard-skills">${e.skills}</p>
         <div class="project-item-box">
           <h3 class="project-name">${e.name}</h3>
-          <a href="${e.githubLink}" target="_blank" class="button-link">
+        <a href="https://github.com/andrii-kyrch/project-CodeHeros-11/blob/main/src/js/my-projects.js" target="_blank" class="button-link">
             Visit
             <svg class="link-icon" width="24" height="24">
               <use href="${I}#arrow"></use>
