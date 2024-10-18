@@ -20,7 +20,7 @@
   padding: 12px;
   line-height: 0;
   border-radius: 8px;
-  background-color: var(--color-benefits-icon-bg);
+  background-color: var(--color-accent);
 }
 .benefits-item-title {
   font-weight: 400;

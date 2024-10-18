@@ -73,15 +73,16 @@ const menuLinks = document.querySelectorAll('.menu-link');
 openMenuBtn.addEventListener('click', () => {
   mobileMenu.classList.toggle('is-open');
   openMenuBtn.classList.toggle('active');
-  if (mobileMenu.classList.contains('is-open')) {
-    disableScroll();
-  } else {
-    enableScroll();
-  }
+  // if (mobileMenu.classList.contains('is-open')) {
+  //   disableScroll();
+  // } else {
+  //   enableScroll();
+  // }
 });
 
 menuLinks.forEach(link => {
   link.addEventListener('click', () => {
+    // enableScroll;
     mobileMenu.classList.remove('is-open');
     openMenuBtn.classList.remove('active');
   });

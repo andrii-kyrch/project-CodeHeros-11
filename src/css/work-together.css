@@ -67,7 +67,7 @@
 }
 
 .input-email.error {
-  color:  red;
+  color: red;
 }
 
 .error-message {
@@ -332,5 +332,5 @@
 }
 
 .modal-close-icon {
-  stroke:#292929
+  stroke: #292929;
 }

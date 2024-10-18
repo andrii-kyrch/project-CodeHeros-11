@@ -19,10 +19,6 @@
   border-bottom: 1px solid var(--color-secondary);
 }
 
-[data-theme='dark'] .accordion-item {
-  border-bottom: 1px solid var(--color-white-dt);
-}
-
 .accordion-header {
   display: flex;
   justify-content: space-between;
@@ -32,6 +28,7 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 1.55;
+  border-radius: 16px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   transition: background-color 0.5s ease;
@@ -39,7 +36,6 @@
 
 .accordion-header:hover {
   background-color: var(--color-accent);
-  border-radius: 16px;
 }
 .accordion-header:hover .faq-icon {
   fill: var(--color-accent);
