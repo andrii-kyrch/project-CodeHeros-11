@@ -20,6 +20,7 @@
   max-width: 1280px;
   padding: 0;
   list-style: none;
+  margin-bottom: 40px;
 }
 
 .my-projects-item {
@@ -56,7 +57,7 @@
 .project-name {
   font-weight: 500;
   font-size: 32px;
-  line-height: 125%;
+  line-height: 1.25;
   letter-spacing: 0.02em;
   text-transform: uppercase;
   margin-bottom: 16px;
@@ -65,61 +66,50 @@
 /* Кнопка-посилання */
 .button-link {
   display: inline-flex;
-  align-items: center;
-  justify-content: space-evenly;
+  align-items: flex-end;
+  justify-content: space-between;
   padding: 12px 24px;
-  width: 125px;
-  height: 48px;
+  min-width: 125px;
   background-color: var(--color-secondary);
   letter-spacing: 0.5px;
   line-height: 28px;
   font-weight: 500;
   font-size: 16px;
   text-transform: uppercase;
-  text-decoration: none;
   border-radius: 8px;
-  transition: background-color 0.3s ease;
+  transition: background-color 250ms ease;
+  stroke: var(--color-primary);
 }
 
 .button-link:hover {
   background-color: var(--color-hover-secondary);
 }
 
-.link-icon {
-  stroke: #00b068;
-  fill: #00b068;
-}
-
 /* Кнопка "Load more" */
 #loadMoreBtn {
-  background-color: var(--color-bg);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 12px 24px;
   border: none;
   color: var(--color-text);
-  text-transform: uppercase;
-  text-decoration: underline;
-  text-decoration-color: var(--color-primary);
-  font-size: 20px;
-  padding: 10px;
-  cursor: pointer;
-  outline: none;
-  transition: color 0.3s, text-decoration-color 0.3s;
+  background-color: var(--color-bg);
+  transition: color 250ms ease;
+}
+
+#loadMoreBtn::after {
+  content: '';
+  display: block;
+  width: 106px;
+  height: 2px;
+  background-color: var(--color-primary);
 }
 
 #loadMoreBtn:hover,
 #loadMoreBtn:focus {
   color: var(--color-primary);
-}
-
-#loadMoreBtn:active {
-  opacity: 0.8;
-  padding: 12px 24px;
-  background-color: var(--color-bg);
-  color: var(--color-text);
-  border: none;
-  font-size: 18px;
-  cursor: pointer;
-  margin-top: 30px;
-  text-transform: uppercase;
 }
 
 /* Медіа-запити для адаптивності */
@@ -144,7 +134,14 @@
 }
 
 /* Tablet і Desktop (від 768px і більше) */
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  .my-projects-list {
+    gap: 60px;
+  }
+  .my-projects-list {
+    margin-bottom: 60px;
+  }
+
   .project-item-box {
     display: flex;
     justify-content: space-between;
@@ -158,9 +155,14 @@
     line-height: 48px;
     margin: 0;
   }
+}
 
-  .button-link {
-    margin-left: 32px;
-    position: static;
+@media screen and (min-width: 1280px) {
+  .my-projects-list {
+    gap: 80px;
+  }
+
+  .my-projects-list {
+    margin-bottom: 80px;
   }
 }
