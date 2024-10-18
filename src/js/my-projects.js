@@ -43,7 +43,8 @@ function loadProjects() {
 
 const totalProjects = [
   {
-    imgSrc: '/img/my-projects/wallet-webservice.webp',
+    imgSrc:
+      '/project-CodeHeros/assets/img-my-projects/chego-jewelry-website.webp',
     altText: 'Wallet Webservice',
     skills: 'React, JavaScript, Node JS, Git',
     name: 'Wallet Webservice',
