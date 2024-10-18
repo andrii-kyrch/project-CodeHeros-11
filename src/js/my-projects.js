@@ -1,5 +1,7 @@
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
+import pathIcons from '../img/icons.svg';
+import pathImg from '../img/my-projects/wallet-webservice.webp';
 
 const loadMoreBtn = document.getElementById('loadMoreBtn');
 const projectList = document.querySelector('.my-projects-list');
@@ -21,7 +23,7 @@ function loadProjects() {
           <a href="${project.githubLink}" target="_blank" class="button-link">
             Visit
             <svg class="link-icon" width="24" height="24">
-              <use href="${/img/icons.svg}#arrow"></use>
+              <use href="${pathIcons}#arrow"></use>
             </svg>
           </a>
         </div>
@@ -43,7 +45,7 @@ function loadProjects() {
 
 const totalProjects = [
   {
-    imgSrc: "${./img/my-projects/wallet-webservice.webp}",
+    imgSrc: '${pathImg}wallet-webservice.webp',
     altText: 'Wallet Webservice',
     skills: 'React, JavaScript, Node JS, Git',
     name: 'Wallet Webservice',
