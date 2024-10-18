@@ -1,7 +1,7 @@
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
-import pathIcons from '../img/icons.svg';
-import pathImg from '../img/my-projects/wallet-webservice.webp';
+import pathIcons from '/img/icons.svg';
+import pathImg from '/img/my-projects/wallet-webservice.webp';
 
 const loadMoreBtn = document.getElementById('loadMoreBtn');
 const projectList = document.querySelector('.my-projects-list');
@@ -45,7 +45,7 @@ function loadProjects() {
 
 const totalProjects = [
   {
-    imgSrc: '${pathImg}wallet-webservice.webp',
+    imgSrc: pathImg,
     altText: 'Wallet Webservice',
     skills: 'React, JavaScript, Node JS, Git',
     name: 'Wallet Webservice',
