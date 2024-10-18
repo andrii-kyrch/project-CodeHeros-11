@@ -29,7 +29,7 @@ function loadProjects() {
         <p class="hard-skills">${project.skills}</p>
         <div class="project-item-box">
           <h3 class="project-name">${project.name}</h3>
-          <a href="${project.githubLink}" target="_blank" class="button-link">
+        <a href="https://github.com/andrii-kyrch/project-CodeHeros-11/blob/main/src/js/my-projects.js" target="_blank" class="button-link">
             Visit
             <svg class="link-icon" width="24" height="24">
               <use href="${pathIcons}#arrow"></use>
