@@ -64,3 +64,11 @@
 .reviews-next-btn:focus:not(:disabled) {
   background-color: var(--color-secondary);
 }
+
+@media screen and (min-width: 768px) {
+  .reviews-prev-btn,
+  .reviews-next-btn {
+    width: 40px;
+    height: 40px;
+  }
+}
