@@ -62,6 +62,7 @@ body {
   letter-spacing: 0.2px;
   color: var(--color-text);
   background-color: var(--color-bg);
+  transition: background-color 250ms linear, color 250ms linear;
 }
 
 .no-scroll {
