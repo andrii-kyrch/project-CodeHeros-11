@@ -13,25 +13,20 @@
 }
 
 .hero-container {
-  display: flex;
-  flex-direction: column;
-  row-gap: 40px;
 }
 
-.title-hero {
+.hero-title {
   font-family: 'Impact', sans-serif;
   font-weight: 400;
   font-size: 64px;
   line-height: 1.25;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  /* padding-top: 96px; */
-  margin-bottom: 0;
 }
 
 .hero-link-wrapper {
   position: relative;
-  max-width: 100%;
+  margin-bottom: 40px;
 }
 
 .hero-link {
@@ -77,20 +72,6 @@
   color: var(--color-primary);
 }
 
-.social-item-hero {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.03em;
-  transition: color 0.3s ease;
-}
-
-.social-item-hero:hover,
-.social-item-hero:focus {
-  color: #00b068;
-}
-
 .hero-social-list {
   max-width: 360px;
   display: flex;
@@ -111,4 +92,56 @@
 .hero-social-link:hover,
 .hero-social-link:focus {
   color: var(--color-primary);
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: url(../img/hero/decor-bg-tablet.png);
+    background-size: 709px;
+    background-position: top;
+    padding-top: 80px;
+  }
+
+  @media screen and (min-resolution: 192dpi) {
+    .hero {
+      background-image: url(../img/hero/decor-bg-tablet@2x.png);
+    }
+  }
+
+  .hero-title {
+    font-size: 136px;
+    line-height: 1.15;
+    letter-spacing: 0.01em;
+    margin-bottom: 60px;
+  }
+
+  .hero-link-wrapper {
+    max-width: 416px;
+  }
+
+  .hero-link {
+    max-width: 261px;
+    font-size: 20px;
+    line-height: 1.66;
+  }
+
+  .hero-text {
+    font-size: 20px;
+    line-height: 1.66;
+    padding-bottom: 80px;
+  }
+
+  .hero-social-list {
+    max-width: 768px;
+    flex-direction: row;
+    column-gap: 40px;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .hero-social-link {
+    display: block;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 }
