@@ -7,22 +7,18 @@
   height: auto !important;
   display: flex !important;
   flex-direction: column;
+  row-gap: 24px;
   justify-content: space-between;
   padding: 32px;
   border-radius: 16px;
   background-color: var(--color-secondary);
 }
 
-.reviews-text {
-  margin-bottom: 24px;
-}
-
 .reviews-author {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   column-gap: 16px;
   font-weight: 600;
-  margin-top: auto;
 }
 
 .reviews-author img {
@@ -49,7 +45,7 @@
   background-color: var(--color-bg);
   fill: none;
   stroke: var(--color-text);
-  transition: background-color 250ms ease, stroke 250ms ease;
+  transition: background-color 250ms linear, stroke 250ms linear;
 }
 
 .reviews-prev-btn:disabled,
